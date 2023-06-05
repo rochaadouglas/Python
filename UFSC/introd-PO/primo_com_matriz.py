@@ -1,3 +1,5 @@
+'''5. Recebe uma matriz numérica e retorna quantos elementos da matriz são números primos.'''
+
 def primo(numero):
     num = numero
     cont = 1

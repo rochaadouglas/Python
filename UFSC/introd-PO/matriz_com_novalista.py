@@ -3,19 +3,14 @@
 def retornaLista(matriz):
     tam = len(m)
     linha = 0
-    lista = []
+    referencia = len(matriz[0])
     while linha < tam:
-        qtcoluna = len(m[linha])
-        coluna = 0
-        while coluna < qtcoluna:
-            if len(qtcoluna) == len(qtcoluna):
-                elemento = m[linha][coluna]
-                lista.append(elemento)
-            coluna += 1
+        qtcoluna = len(matriz[linha])
+        if qtcoluna != referencia:
+            return []
         linha += 1
-    return lista
-
-
-m = [[12, 2, 4, 34], [45, 3, 5, 1]]    #2 linhas 4 colunas
+    return [linha, referencia]
+   
+m = [[2, 4, 7], [10, 32, 3], [1]]
 teste = retornaLista(m)
 print(teste)

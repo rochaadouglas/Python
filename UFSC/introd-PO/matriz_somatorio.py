@@ -23,7 +23,7 @@ def retornaSoma(matriz, matriz2):
         coluna = 0
         while coluna < qtcoluna:
             soma = matriz[linha][coluna] + matriz2[linha][coluna]
-            nova_matriz.append(soma)
+            nova_matriz.append(soma)    
             #print(soma2)            
             coluna += 1
         linha += 1

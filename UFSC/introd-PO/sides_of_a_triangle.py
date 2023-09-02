@@ -4,7 +4,6 @@ first_side = float(input('Report the first side of the triangle: '))
 second_side = float(input('Report the second side of the triangle: '))
 third_side = float(input('Report the third side of the triangle: '))
 sum = first_side + second_side
-<<<<<<< HEAD
 if third_side < first_side and third_side < second_side or third_side >= sum:
     print('You do not have a triangle.')
 elif first_side == second_side and second_side == third_side:
@@ -13,7 +12,3 @@ elif first_side == second_side or second_side == third_side or third_side == fir
     print('Isosceles triangle.')
 elif first_side != second_side and second_side != third_side:
     print('Scalene triangle.')
-=======
-if third_side < first_side and third_side < second_side or third_side > sum:
-    print('You do not have a triangle.')
->>>>>>> cca3241884018c601b05b70cdca021667ab383e4

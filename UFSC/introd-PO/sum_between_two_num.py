@@ -7,4 +7,3 @@ while cont <= higher_num:
     sum = sum + cont
     cont += 1
 print(sum)
-

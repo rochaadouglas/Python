@@ -5,4 +5,4 @@ cont = 1
 while cont <= total_multiples:
     result = num * cont
     cont += 1
-    print(result)
+    print(f'{result} is a multiple of {num}.')

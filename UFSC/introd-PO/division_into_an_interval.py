@@ -2,17 +2,17 @@
 
 num = int(input('Numero: '))
 cont = 1
-while num < 1 or num > 9:
-    num = int(input('Numero de novo: '))
+while num != 0 and num < 1 or num > 9:
+    num = int(input('Digite de novo: '))
     cont += 1
     if num == 0:
-        print('FIM DO PROGRAMA')
-    elif num >= 1 and num <= 9:
-        cont_inter = 1
-        sum = 0
-        while cont_inter <= 20:
-            mult = cont_inter % num
-            if mult == 0:
-                sum = sum + 1
-            cont_inter += 1
-        print(sum)
+        print('FIM')
+if num >= 1 and num <= 9:
+    cont_inter = 1
+    sum = 0
+    while cont_inter <= 1000:
+        mult = cont_inter % num
+        if mult == 0:
+            sum = sum + 1
+        cont_inter += 1
+    print(sum)

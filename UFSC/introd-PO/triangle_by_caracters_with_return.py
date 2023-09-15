@@ -18,4 +18,4 @@ while num_lines > 0:
         print(f'*', end='')
         count_carac -= 1
     num_lines -= 1 
-    print() 
+    print()

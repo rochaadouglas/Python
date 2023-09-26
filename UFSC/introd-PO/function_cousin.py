@@ -11,5 +11,5 @@ def cousin_number(number):
     else:
         return False
 
-num = cousin_number(11)
-print(num)
+#num = cousin_number(11)
+#print(num)

@@ -11,4 +11,5 @@ def cousin_number(number):
     else:
         return False
 
-print(f'{cousin_number(10)}')
+num = cousin_number(11)
+print(num)

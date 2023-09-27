@@ -9,5 +9,5 @@ def factorial_list(list):
         print(fact)
         ind += 1
 
-list = [4, 5, 9, 7]
+list = [4, 5, 2, 3]
 test = factorial_list(list)

@@ -5,6 +5,7 @@ def note_list(list):
     size = len(list)
     ind = 0
     new_list = []
+    median_mode = []
     while ind < size:
         value = list[ind]
         if value >= 0 and value <= 10:
@@ -12,7 +13,10 @@ def note_list(list):
         else:
             return None
         ind += 1
+    median_mode.append(median(new_list))
+    median_mode.append(mode(new_list))
+    return median_mode
 
-list = [3.0, 3.0, 5.0, 5.0, 3.0]
+list = [3.0, 3.0, 5.0, 5.0, 10.0]
 test = note_list(list)
 print(test)

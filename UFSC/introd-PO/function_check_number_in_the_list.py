@@ -12,5 +12,5 @@ def in_the_list(list, number):
         return False
 
 #list = [21, 9, 8, 33]
-test = in_the_list([21, 9, 8, 33], 21)
+test = in_the_list([21, 9, 8, 33], 22)
 print(test)

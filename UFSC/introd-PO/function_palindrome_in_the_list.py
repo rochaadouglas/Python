@@ -2,17 +2,17 @@
 def palindrome(text):
     size = len(text)
     ind = size - 1
+    ind_inicial = 0
     while ind >= 0:
-        ind_inicial = 0
         element = text[ind]
         element_inicial = text[ind_inicial]
-        if element == element_inicial:
-            return True
+        if element != element_inicial:
+            return False
         ind_inicial += 1
         ind -= 1
     else:
-        return False
+        return True
 
-text = 'eede'
+text = 'socorrammesubinoonibusemmarrocos'
 test = palindrome(text)
 print(test)

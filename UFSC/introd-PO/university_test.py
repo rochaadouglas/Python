@@ -27,14 +27,14 @@ def apenasRepetidos(lista):
     while ind < tam:
         elemento = lista[ind]
         check = quantidade(lista, elemento)
-        if check > 1:
+        if check > 1 and elemento not in nova_lista:
             nova_lista.append(elemento)
         ind += 1
     return nova_lista
 
-#lista = [2, 3, 3, 1, 3, 1, 2]
-#teste = apenasRepetidos(lista)
-#print(teste)
+lista = [2, 3, 3, 1, 3, 1, 2]
+teste = apenasRepetidos(lista)
+print(teste)
 
 '''---------------------------------------------------------------------------------'''
 #Desenvolva um programa que leia um número inteiro maior do que 1 (não é necessário verificar) via entrada do usuário, e exiba uma figura conforme os exemplos abaixo. Note que a entrada do usuário determina a altura e largura da figura. 

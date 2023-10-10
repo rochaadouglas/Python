@@ -34,4 +34,41 @@ def apenasRepetidos(lista):
 
 lista = [2, 3, 3, 1, 3, 1, 2]
 teste = apenasRepetidos(lista)
-print(teste)
+#print(teste)
+
+'''---------------------------------------------------------------------------------'''
+#Desenvolva um programa que leia um número inteiro maior do que 1 (não é necessário verificar) via entrada do usuário, e exiba uma figura conforme os exemplos abaixo. Note que a entrada do usuário determina a altura e largura da figura. 
+#Entrada 7
+
+'''1*************1
+   12***********12
+   123*********123
+   1234*******1234
+   12345*****12345
+   123456***123456
+   1234567*1234567'''
+
+
+
+def mostraNum(fim):
+    ind = 1
+    while ind <= fim:
+        print(ind, end='')
+        ind += 1
+
+def mostraAst(qt):
+    ind = 1
+    while ind <= qt:
+        print('*', end='')
+        ind += 1
+
+entrada = 7
+la = 1
+qtast = (entrada * 2) - 1
+while la <= entrada:
+    mostraNum(la)
+    mostraAst(qtast)
+    mostraNum(la)
+    la += 1
+    qtast -= 2
+    print()

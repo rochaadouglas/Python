@@ -32,8 +32,8 @@ def apenasRepetidos(lista):
         ind += 1
     return nova_lista
 
-lista = [2, 3, 3, 1, 3, 1, 2]
-teste = apenasRepetidos(lista)
+#lista = [2, 3, 3, 1, 3, 1, 2]
+#teste = apenasRepetidos(lista)
 #print(teste)
 
 '''---------------------------------------------------------------------------------'''
@@ -47,8 +47,6 @@ teste = apenasRepetidos(lista)
    12345*****12345
    123456***123456
    1234567*1234567'''
-
-
 
 def mostraNum(fim):
     ind = 1

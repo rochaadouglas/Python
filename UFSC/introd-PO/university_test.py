@@ -16,7 +16,7 @@ def quantidade(lista, num):
         ind += 1
     return soma
     
-#teste = quantidade([1, 1, 4, 5, 5])
+#teste = quantidade([1, 1, 4, 5, 5], 5)
 #print(teste)
 
 def apenasRepetidos(lista):

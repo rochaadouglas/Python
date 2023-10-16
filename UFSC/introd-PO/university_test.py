@@ -22,7 +22,6 @@ def quantidade(lista, num):
 def apenasRepetidos(lista):
     tam = len(lista)
     ind = 0
-    lista_elementos = []
     nova_lista = []
     while ind < tam:
         elemento = lista[ind]

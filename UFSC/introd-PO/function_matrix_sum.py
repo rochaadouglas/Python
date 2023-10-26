@@ -14,5 +14,5 @@ def matrixSum(matrix):
     return sum
 
 m = [[2, 3, 4, 5], [1, 4, 2, 4], [1, 4, 2, 4]]
-teste = matrixSum(m)
-print(teste)
+test = matrixSum(m)
+print(test)

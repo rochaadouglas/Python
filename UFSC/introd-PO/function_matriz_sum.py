@@ -13,7 +13,6 @@ def matrizSum(matriz):
         line += 1
     return sum
 
-
 m = [[2, 3, 4, 5], [1, 4, 2, 4], [1, 4, 2, 4]]
 teste = matrizSum(m)
 print(teste)

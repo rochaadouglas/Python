@@ -1,3 +1,5 @@
+#Recebe uma matriz e a apresenta para o usuário na forma de linhas x colunas, cada elemento separado por um espaço em branco.
+
 def showMatrix(matrix):
     size = len(matrix)
     line = 0

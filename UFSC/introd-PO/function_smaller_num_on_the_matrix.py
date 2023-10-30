@@ -15,8 +15,9 @@ def smallerNum(matrix):
             col += 1
         line += 1
     new_list.append(smaller)
+    new_list.append(ind)
     return new_list
 
-m = [[1, 6, 5], [23, 5, 10], [9, 4, 10]]
+m = [[2, 6, 5], [23, 5, 10], [9, 4, 10]]
 test = smallerNum(m)
 print(test)

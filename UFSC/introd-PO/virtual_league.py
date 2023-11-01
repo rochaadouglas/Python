@@ -5,13 +5,16 @@ def ourList(matrix):
     line = 0
     new_list = []
     menor = matrix[0][1]
+    col_name = 0
     while line < size:
         amount_col = len(matrix[line])
         col = 1
         while col < amount_col:
             element = matrix[line][col]
-            if element > menor:
+            col_name = matrix[0]
+            if element > menor and element not in new_list:
                 new_list.append(element)
+                new_list.append(col_name)
             col += 1
         line += 1
     return new_list

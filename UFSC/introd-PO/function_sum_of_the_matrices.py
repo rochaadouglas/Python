@@ -22,6 +22,6 @@ def sumMatrices(matrix1, matrix2):
     return new_matrix
 
 m1 = [[1, 2], [3, 4]]
-m2 = [[1, 2], [3, 3]]
+m2 = [[1, 2], [3, 2]]
 test = sumMatrices(m1, m2)
 print(test)

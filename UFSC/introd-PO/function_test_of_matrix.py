@@ -10,13 +10,13 @@ def test_matrix(matrix):
         col = 0
         while col < amoun_col:
             if amoun_col != comp:
-                return []
+                return False
             col += 1
         line += 1
     new_list.append(line)
     new_list.append(col)
-    return new_list
+    return True
 
-m = [[1, 2], [3, 4]]
-test = test_matrix(m)
-print(test)
+#m = [[1, 2], [3, 4]]
+#test = test_matrix(m)
+#print(test)

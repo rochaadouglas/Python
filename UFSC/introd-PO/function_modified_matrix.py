@@ -15,12 +15,15 @@ def modifiedMatrix(matrix):
                 element = element * 10
             elif col == 1:
                 element = factorial(element)
+            elif col == 2:
+                if element < 0:
+                    element = element * -1
             col += 1
             new_list.append(element)
         line += 1
         new_matrix.append(new_list)
     return new_matrix
 
-m = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+m = [[1, 2, 3], [4, 5, -6], [7, 8, -9]]
 test = modifiedMatrix(m)
 print(test)

@@ -1,4 +1,4 @@
-#Multiplicar todos os elementos de cada linha pelo valor que esta inserido no índice da diagonal principal
+# Recebe uma matriz quadrada por parâmetro e mostra, para o usuário, a matriz da entrada multiplicada pelos elementos da sua diagonal principal. Multiplique todos os elementos de cada linha pelo respectivo elemento da diagonal principal.
 
 def mult_ele(matrix):
     size = len(matrix)

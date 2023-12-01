@@ -10,3 +10,14 @@ class regras():
             print()
             for c in e:
                 print(f'{c}', end=' |')
+
+obj1 = regras
+obj1.mostra_tabuleiro()
+
+class jogadores():
+
+    def __init__(self, ):
+        self.tipo = input('Jogar contra humano ou PC?')
+
+obj1 = jogadores
+obj1.self.tipo()

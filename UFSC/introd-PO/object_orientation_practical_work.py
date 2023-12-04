@@ -2,7 +2,7 @@ import random
 
 class Tabuleiro:
     def __init__(self):
-        self.tabuleiro = [[' ' for i in range(7)] for i in range(6)]
+        self.tabuleiro = [[' ' for _ in range(7)] for _ in range(6)]
 
     def exibir_tabuleiro(self):
         for linha in self.tabuleiro:
@@ -17,8 +17,29 @@ class Tabuleiro:
         return False
 
     def verificar_vitoria(self, jogador):
-        # Implemente a lógica de verificação de vitória
-        pass
+        # Verificar vitória na horizontal
+        for linha in self.tabuleiro:
+            if ''.join(linha).count(jogador.peca * 4) > 0:
+                return True
+
+        # Verificar vitória na vertical
+        for coluna in range(7):
+            if ''.join([self.tabuleiro[i][coluna] for i in range(6)]).count(jogador.peca * 4) > 0:
+                return True
+
+        # Verificar vitória na diagonal (ascendente)
+        for i in range(3, 6):
+            for j in range(4):
+                if ''.join([self.tabuleiro[i - k][j + k] for k in range(4)]).count(jogador.peca * 4) > 0:
+                    return True
+
+        # Verificar vitória na diagonal (descendente)
+        for i in range(3):
+            for j in range(4):
+                if ''.join([self.tabuleiro[i + k][j + k] for k in range(4)]).count(jogador.peca * 4) > 0:
+                    return True
+
+        return False
 
     def tabuleiro_cheio(self):
         return all(cell != ' ' for row in self.tabuleiro for cell in row)
@@ -58,7 +79,6 @@ class Jogo:
         return True
 
     def iniciar_jogo(self):
-        print("Bem-vindo ao Jogo de Conecta 4!")
         print("Escolha o modo de jogo:")
         print("1. Humano vs Humano")
         print("2. Humano vs Computador")

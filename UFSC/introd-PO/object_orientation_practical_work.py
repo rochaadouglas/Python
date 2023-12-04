@@ -12,7 +12,7 @@ class Tabuleiro:
         print('-' * 29)
 
     #Realiza a jogada de um jogador em uma coluna
-    #Percorre as linhas da coluna, de baixo para cima. Quando encontra a primeira posição vazia (' '), preenche com a peça do jogador (X ou O). Retorna True se a jogada for bem-sucedida e False se a coluna estiver cheia
+    #Percorre as linhas da coluna, de baixo para cima. Quando encontra a primeira posição vazia, preenche com a peça do jogador (X ou O). Retorna True se a jogada for bem-sucedida e False se a coluna estiver cheia
     def realizar_jogada(self, coluna, jogador):
         for i in range(5, -1, -1):
             if self.tabuleiro[i][coluna] == ' ':
@@ -21,7 +21,7 @@ class Tabuleiro:
         return False
 
     # Verificar se o jogador atual venceu o jogo.
-    # Implementa a lógica de verificação de vitória. Analisa todas as linhas, colunas e diagonais do tabuleiro para encontrar sequências de 4 peças iguais do jogador.
+    # Verificação de vitória. Analisando as linhas, colunas e diagonais do tabuleiro para encontrar sequências de 4 peças iguais do jogador.
     def verificar_vitoria(self, jogador):
         # Verificar vitória na horizontal
         for linha in self.tabuleiro:
@@ -33,13 +33,13 @@ class Tabuleiro:
             if ''.join([self.tabuleiro[i][coluna] for i in range(6)]).count(jogador.peca * 4) > 0:
                 return True
 
-        # Verificar vitória na diagonal (ascendente)
+        # Verificar vitória na diagonal
         for i in range(3, 6):
             for j in range(4):
                 if ''.join([self.tabuleiro[i - k][j + k] for k in range(4)]).count(jogador.peca * 4) > 0:
                     return True
 
-        # Verificar vitória na diagonal (descendente)
+        # Verificar vitória na diagonal 
         for i in range(3):
             for j in range(4):
                 if ''.join([self.tabuleiro[i + k][j + k] for k in range(4)]).count(jogador.peca * 4) > 0:

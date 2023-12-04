@@ -87,8 +87,8 @@ class Jogo:
     # Inicia o jogo.
     def iniciar_jogo(self):
         print("Escolha o modo de jogo:")
-        print("1. Humano vs Humano")
-        print("2. Humano vs Computador")
+        print("1. Humano vs Computador")
+        print("2. Humano vs Humano")
 
         modo = int(input("Digite o número correspondente ao modo de jogo desejado: "))
 

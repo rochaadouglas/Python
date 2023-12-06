@@ -54,12 +54,10 @@ class Tabuleiro:
         for i in range(3, 6):
             for j in range(4):
                 # Verificar diagonal descendente \
-                diagonal_descendente = (self.tabuleiro[i][j] == jogador.peca and self.tabuleiro[i - 1][j + 1] ==
-                                        jogador.peca and self.tabuleiro[i - 2][j + 2] == jogador.peca and self.tabuleiro[i - 3][j + 3] == jogador.peca)
+                diagonal_descendente = (self.tabuleiro[i][j] == jogador.peca and self.tabuleiro[i - 1][j + 1] == jogador.peca and self.tabuleiro[i - 2][j + 2] == jogador.peca and self.tabuleiro[i - 3][j + 3] == jogador.peca)
 
             # Verificar diagonal ascendente /
-                diagonal_ascendente = (self.tabuleiro[i][j + 3] == jogador.peca and self.tabuleiro[i - 1][j + 2] ==
-                                       jogador.peca and self.tabuleiro[i - 2][j + 1] == jogador.peca and self.tabuleiro[i - 3][j] == jogador.peca)
+                diagonal_ascendente = (self.tabuleiro[i][j + 3] == jogador.peca and self.tabuleiro[i - 1][j + 2] == jogador.peca and self.tabuleiro[i - 2][j + 1] == jogador.peca and self.tabuleiro[i - 3][j] == jogador.peca)
                 if diagonal_descendente or diagonal_ascendente:
                     return True
 
@@ -95,8 +93,7 @@ class Jogo:
 
     # Solicita uma jogada ao jogador
     def realizar_jogada_jogador(self, jogador):
-        coluna = int(
-            input(f"{jogador.nome}, escolha a coluna (0-6) para fazer sua jogada: "))
+        coluna = int(input(f"{jogador.nome}, escolha a coluna (0-6) para fazer sua jogada: "))
         if 0 <= coluna <= 6 and self.tabuleiro.realizar_jogada(coluna, jogador):
             return True
         else:

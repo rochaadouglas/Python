@@ -1,27 +1,17 @@
 class Pessoa():
 
     def __init__(self, cpf='000.000.000-00', nome='___'):
-        self.cpf = cpf
+        self._cpf = cpf
         self.nome = nome
-        
-    def exibir(self):
-        print('------------')
-        print(self.cpf, self.nome)
-
+         
 class Estudante(Pessoa):
 
-    def __init__(self, cpf='000.000.000-00', nome='___', matricula=''):
+    def __init__(self, cpf='000.000.000-00', nome='___', matricula=' '):
         super().__init__(cpf, nome)
-        self.matricula = matricula
+        self.__matricula = matricula
+    
+    def __str__(self):
+        print(f'{self._cpf, self.nome, self.__matricula}')
 
-    def exibir(self):
-        Pessoa.exibir(self)
-        print(self.matricula)
-
-
-obj1 = Estudante()
-print(f'{obj1.cpf}')
-
-joo = Estudante('000.0000.1212', 'joo', 'eofefoe')
-joo.exibir()
-
+fulano = Estudante('000.000.000-00', 'Fulano de tal', '20203711')
+fulano.__str__()

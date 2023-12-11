@@ -32,3 +32,6 @@ class Cadastro():
 estudante = Cadastro()
 print(estudante.adicionaEstudante('000.000.000-00', 'Fulano de tal', '20203711'))
 print(estudante.adicionaEstudante('000.000.000-00', 'Fulano de tal', '20203711'))
+
+print('---'*30)
+

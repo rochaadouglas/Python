@@ -35,3 +35,25 @@ print(estudante.adicionaEstudante('000.000.000-00', 'Fulano de tal', '20203711')
 
 print('---'*30)
 
+def verifica_pixel_esquerda(matriz, linha=2, coluna=2):
+    tam = len(matriz)
+    l = linha
+    while l >= 0:
+        qtcol = len(matriz[l])
+        col = coluna
+        while col < qtcol:
+            elemento = matriz[l][col]
+            if elemento != 0:
+                print(elemento)
+            col += 1
+        l -= 1
+
+def verifica_pixel_direita(matriz):
+    pass
+
+
+m = [[0, 0, 0, 0, 0],
+     [0, 0, 0, 7, 0],
+     [0, 0, 7, 7, 7],]
+
+verifica_pixel_esquerda(m)

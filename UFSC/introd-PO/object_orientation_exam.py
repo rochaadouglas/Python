@@ -6,7 +6,7 @@ class Pessoa():
          
 class Estudante(Pessoa):
 
-    def __init__(self, cpf='000.000.000-00', nome='___', matricula=' '):
+    def __init__(self, cpf='000.000.000-00', nome='___', matricula=''):
         super().__init__(cpf, nome)
         self.__matricula = matricula
     
@@ -22,14 +22,13 @@ class Cadastro():
         self.__cad = {}
 
     def adicionaEstudante(self, cpf, nome, matricula):
-        self.cpf = cpf
-        self.nome = nome
-        self.matricula = matricula
-        if self.matricula not in self.__cad:
-            self.__cad = matricula
+        novo_estudante = Estudante(cpf, nome, matricula)
+        if matricula not in self.__cad:
+            self.__cad[matricula] = novo_estudante
             return True
         else:
             return False
         
 estudante = Cadastro()
-estudante.adicionaEstudante({20203711:['']})
+print(estudante.adicionaEstudante('000.000.000-00', 'Fulano de tal', '20203711'))
+print(estudante.adicionaEstudante('000.000.000-00', 'Fulano de tal', '20203711'))

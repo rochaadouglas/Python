@@ -1,4 +1,5 @@
 #Obtenha números inteiros quaisquer via entrada do usuário até que o usuário entre com o número 0. Informe a quantidade números digitados, o somatório e a média dos números.
+
 #Get any integer numbers with user input until the user input with number 0. Inform the amount of number, sum of number and average of number.
 num = int(input('Report your number: '))
 cont = 0

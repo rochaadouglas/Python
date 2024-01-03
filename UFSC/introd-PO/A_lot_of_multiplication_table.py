@@ -1,4 +1,5 @@
 #Obtenha via entrada do usuário dois números inteiros positivos quaisquer (início e fim) e exiba as tabuadas dos números presentes no intervalo entre início e fim (incluindo esses números).
+
 #Get with user input two any positive whole numbers (beginning and end) and show the multiplication tables between beginning and end.
 num1 = int(input('Beginning value: '))
 num2 = int(input('End value: '))

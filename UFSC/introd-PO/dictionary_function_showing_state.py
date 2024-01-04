@@ -1,6 +1,6 @@
 # Utilizando o dicionário siglas, crie uma função sem parâmetros e sem retorno a qual apenas exibe os nomes dos estados seguidos pela sua sigla.
 
-# Using the acronym dictionary, create a function that has no parameter and has no return and show the states name after your acronyms only
+# Using the acronym dictionary, create a function that has no parameter and has no return and show the states name after your acronyms only.
 def acronymState():
     for i in acronym:
         print(f'State: {(acronym[i])} ({i})')

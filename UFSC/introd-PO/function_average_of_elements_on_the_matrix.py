@@ -1,5 +1,6 @@
 # Recebe uma matriz quadrada por parâmetro e retorna a média dos elementos da diagonal principal.
 
+# Receive a square matrix by parameter and return the elements averates of the principal diagonal.
 def average(matrix):
     size = len(matrix)
     line = 0

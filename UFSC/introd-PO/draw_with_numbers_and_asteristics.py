@@ -1,4 +1,7 @@
-#Desenvolva um programa que leia um número inteiro maior do que 1 (não é necessário verificar) via entrada do usuário, e exiba uma figura conforme os exemplos abaixo. Note que a entrada do usuário determina a altura e largura da figura. 
+# Desenvolva um programa que leia um número inteiro maior do que 1 (não é necessário verificar) via entrada do usuário, e exiba uma figura conforme os exemplos abaixo. Note que a entrada do usuário determina a altura e largura da figura.
+
+# # Develop a program that read an integer value bigger than 0 by user input and show a character like the exemples. Look that the user input determines the height and size of the figure.
+
 # Número de linhas no padrão
 qt_linhas = int(input('Informe a quantidade de linhas: '))
 ind = 1

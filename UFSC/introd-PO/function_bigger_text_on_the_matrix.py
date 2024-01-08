@@ -1,5 +1,6 @@
 #Recebe uma matriz contendo textos e retorna qual o maior texto armazenado na matriz.
 
+# Receive an array containing texts and return the largest text stored on the matrix.
 def biggerText(matrix):
     size = len(matrix)
     line = 0

@@ -1,5 +1,6 @@
 # Recebe uma matriz numérica com três colunas (não é necessário verificar a quantidade de colunas) e retorna uma nova matriz com as seguintes modificações na matriz de entrada: a) 1a coluna: multiplicar todos os elementos da desta coluna por 10; b) 2a coluna: calcular o fatorial de cada elemento desta coluna; c) 3a coluna: o módulo de cada elemento desta coluna. Para o cálculo do fatorial, utilize a função factorial do módulo math e para a obtenção do módulo, utilize a função abs incluída no próprio python.
 
+# Receive a numeric array with three columns (it doesn't necessary to check the amoun of columns) and return a new array with some modifications:a) first colum: multiply all elements in the column by 10; b) second column: calculate the factorial of each element in this column; c) third column:the module of each element in this column. for the factorial calculate, use the factorial function from math module and to obtention the module, use the function abs from Python
 from math import factorial
 def modifiedMatrix(matrix):
     size = len(matrix)

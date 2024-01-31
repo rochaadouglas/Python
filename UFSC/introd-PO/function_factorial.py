@@ -1,3 +1,6 @@
+# Função do Fatorial.
+
+# Factorial function.
 def factorial(number, number2=True):
     fact = number
     mult = fact - 1

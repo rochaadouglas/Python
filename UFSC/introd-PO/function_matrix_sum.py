@@ -1,5 +1,6 @@
-#Recebe uma matriz numérica e retorna o somatório de todos os elementos da matriz.
+# Recebe uma matriz numérica e retorna o somatório de todos os elementos da matriz.
 
+# Receve a numeric array and returns the sum of all elements in the array
 def matrixSum(matrix):
     size = len(matrix)
     line = 0

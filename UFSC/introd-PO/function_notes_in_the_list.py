@@ -1,6 +1,6 @@
-#Recebe uma lista com notas (valores em ponto flutuante) entre 0 e 10 e retorna uma lista contendo a média e a moda das notas. Para o cálculo da média e mediana, utilize funções do módulo statistics. Caso a lista contenha notas inválidas, não realize o cálculo e a função não retorna nada.
+# Recebe uma lista com notas (valores em ponto flutuante) entre 0 e 10 e retorna uma lista contendo a média e a moda das notas. Para o cálculo da média e mediana, utilize funções do módulo statistics. Caso a lista contenha notas inválidas, não realize o cálculo e a função não retorna nada.
 
-# receive a note list (float values) between 0 and 10 and return a list containing the mean and mode of notes. For the mean and mode calculation, use the function of the statistic module. If the list contain invalid notes, don't use it.
+# Receive a note list (float values) between 0 and 10 and return a list containing the mean and mode of notes. For the mean and mode calculation, use the function of the statistic module. If the list contain invalid notes, don't use it.
 from statistics import median
 from statistics import mode
 def note_list(list):

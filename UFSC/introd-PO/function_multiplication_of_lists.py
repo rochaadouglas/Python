@@ -1,4 +1,6 @@
-#Recebe duas listas e retorna uma nova lista contendo a multiplicação dos elementos com o mesmo índice das listas de entrada. Caso o tamanho das listas seja diferente, inclua diretamente os elementos restantes da maior lista.
+# Recebe duas listas e retorna uma nova lista contendo a multiplicação dos elementos com o mesmo índice das listas de entrada. Caso o tamanho das listas seja diferente, inclua diretamente os elementos restantes da maior lista.
+
+# Receive two lists and return a new list containing the multiplication of elements with some index of the input lists. If the lists size are different, include the remaining elements of the bigger list.
 def multiplication(list1, list2):
     size = len(list1)
     ind = 0

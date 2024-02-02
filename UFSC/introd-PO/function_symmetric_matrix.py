@@ -1,5 +1,6 @@
-#Recebe uma matriz quadrada e retorna um valor lógico indicando se ela é ou não simétrica. Uma matriz é simétrica caso, para toda linha l e coluna c: M[l][c] = M[c][l].
+# Recebe uma matriz quadrada e retorna um valor lógico indicando se ela é ou não simétrica. Uma matriz é simétrica caso, para toda linha l e coluna c: M[l][c] = M[c][l].
 
+# Receive a square matrix and return a logical value indicating if it is or not symmetric.
 def symmetricMatrix(matrix):
     size = len(matrix)
     line = 0

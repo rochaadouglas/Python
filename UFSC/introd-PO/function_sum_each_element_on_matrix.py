@@ -1,5 +1,6 @@
-#Recebe uma matriz numérica quadrada (verifique utilizando a função anterior) e retorne uma lista com o somatório dos elementos de cada coluna.
+# Recebe uma matriz numérica quadrada (verifique utilizando a função anterior) e retorne uma lista com o somatório dos elementos de cada coluna.
 
+# Receive a square numeric matrix and return a list with sum of elements of each column.
 from function_square_matrix import squareMatrix
 def sumElement(matrix):
     size = len(matrix)

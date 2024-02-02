@@ -1,5 +1,6 @@
-#Recebe uma matriz numérica e retorna uma lista contendo qual o menor elemento da matriz e sua respectiva posição (linha e coluna)
+# Recebe uma matriz numérica e retorna uma lista contendo qual o menor elemento da matriz e sua respectiva posição (linha e coluna).
 
+# Receive a numeric matrix and return a list containing what the smallest element of the matrix and your respective position.
 def smallerNum(matrix):
     size = len(matrix)
     line = 0

@@ -1,5 +1,6 @@
-#Recebe uma matriz numérica e retorna um valor lógico informando se ela é uma matriz quadrada ou não (uma matriz é quadrada caso ela tenha a mesma quantidade de linhas e colunas, exemplos: 5x5 e 10x10).
+# Recebe uma matriz numérica e retorna um valor lógico informando se ela é uma matriz quadrada ou não (uma matriz é quadrada caso ela tenha a mesma quantidade de linhas e colunas, exemplos: 5x5 e 10x10).
 
+# Receive a numeric matrix and return a logical value reporting if it is a square matrix or not.
 def squareMatrix(matrix):
     size = len(matrix)
     line = 0 

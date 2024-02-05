@@ -1,5 +1,6 @@
-#Obtenha uma quantidade de números a serem lidos via entrada do usuário (qt). Em seguida, obtenha essa quantidade de números (qt) via entrada e, ao final, exiba o somatório dos fatoriais dos números lidos.
-#Get a amount of number to be read with user input. Next, make the factorial of the number and show to user the sum of the factorial result.
+# Obtenha uma quantidade de números a serem lidos via entrada do usuário (qt). Em seguida, obtenha essa quantidade de números (qt) via entrada e, ao final, exiba o somatório dos fatoriais dos números lidos.
+
+# Get a amount of number to be read with user input. Next, make the factorial of the number and show to user the sum of the factorial result.
 amount_num = int(input('Number amount: '))
 count = 1
 sum_fact = 0

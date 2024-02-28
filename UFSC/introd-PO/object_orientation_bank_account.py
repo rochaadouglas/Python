@@ -1,5 +1,6 @@
-#Elabore uma classe para representar uma Conta Bancária a qual permite saques, depósitos, verificação de saldo, informação se o saldo está no negativo e troca de senha do dono da conta. Atenção ao contexto do problema, não podemos realizar saques de valores negativos e nem de valores superiores ao saldo. Depósitos também não podem ser negativos e nem ser de R$ 0,00. Teste o funcionamento da classe executando seus métodos em, no mínimo, dois objetos distintos.
+# Elabore uma classe para representar uma Conta Bancária a qual permite saques, depósitos, verificação de saldo, informação se o saldo está no negativo e troca de senha do dono da conta. Atenção ao contexto do problema, não podemos realizar saques de valores negativos e nem de valores superiores ao saldo. Depósitos também não podem ser negativos e nem ser de R$ 0,00. Teste o funcionamento da classe executando seus métodos em, no mínimo, dois objetos distintos.
 
+# Elaborate a class to represent a bank account what have permission withdraw, deposit, balance check, negative balance verification and password change of user. Attention to problem context, we can't make withdrawals of negative values and values above of balance. Deposit also can't be negative and R$0,00. Test the operation of class running your methods in, two objects.
 class bank_account():
     def __init__(self, opering_bal=0, password='douglas'):
         self.balance = opering_bal

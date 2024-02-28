@@ -1,4 +1,6 @@
-#Recebe uma lista com números, encontra o maior número dessa lista e retorna uma nova lista com todos os números da lista original divididos pelo maior número.
+# Recebe uma lista com números, encontra o maior número dessa lista e retorna uma nova lista com todos os números da lista original divididos pelo maior número.
+
+# Receive a number list, find the bigger number of this list and return a new list with all numbers of the original list dividid by bigger number.
 def bigger_number(list):
     size = len(list)
     ind = 0

@@ -1,5 +1,6 @@
-#Função para saber se um número é primo.
-#Function to know if number is a cousin.
+# Função para saber se um número é primo.
+
+# Function to know if number is a cousin.
 def cousin_number(number):
     value = number
     count = 1

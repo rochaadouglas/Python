@@ -1,5 +1,6 @@
-#Recebe uma matriz contendo textos e informe para o usuário quais linhas e colunas possuem valores nulos (‘’).
+# Recebe uma matriz contendo textos e informe para o usuário quais linhas e colunas possuem valores nulos (‘’).
 
+# Receive a matrix containing texts and report to user what lines and columns have nulls values.
 def nullValue(matrix):
     size = len(matrix)
     line = 0

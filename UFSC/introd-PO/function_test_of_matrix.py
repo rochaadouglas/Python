@@ -1,5 +1,6 @@
 # Recebe uma matriz e retorna uma nova lista com a quantidade linhas e colunas dessa matriz. Caso a matriz tenha alguma linha cuja quantidade de colunas seja diferente da primeira, retorne vazio. Assim, a lista de retorno terá sempre duas dimensões.
 
+# Receive a matrix and return a new list with the lines amount and columns that matrix. If the matrix has any line that columns amount to be differentof first you return empty.
 def test_matrix(matrix):
     size = len(matrix)
     line = 0

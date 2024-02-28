@@ -1,4 +1,6 @@
-#Recebe uma lista de números e retorna o somatório dos números pares presentes na lista.
+# Recebe uma lista de números e retorna o somatório dos números pares presentes na lista.
+
+# Receive a number list and return the sum of even numbers on list.
 def even_number(list):
     size = len(list)
     ind = 0

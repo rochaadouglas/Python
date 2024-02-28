@@ -1,4 +1,6 @@
-#Recebe uma lista de números e retorna qual o maior número presente na lista.
+# Recebe uma lista de números e retorna qual o maior número presente na lista.
+
+# Receive a list of numbers and return what a bigger number on the list.
 def bigger_number(list):
     size = len(list)
     ind = 0

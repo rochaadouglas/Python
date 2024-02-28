@@ -1,5 +1,6 @@
 # Recebe uma matriz numérica e retorna uma nova matriz onde todos os elementos devem ser multiplicados por 10, com exceção da diagonal principal, onde todos os elementos devem ser 0.
 
+# Receive a numeric matrix and return a new matrix where all elements are be multiplicate for 10, except the principal diagonal, where all elements are be 0.
 def multiplicMatrix(matrix, num):
     mult = num
     size = len(matrix)

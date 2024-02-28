@@ -1,5 +1,6 @@
-#Recebe uma matriz numérica e informe para o usuário quais linhas e colunas possuem somente valores negativos.
+# Recebe uma matriz numérica e informe para o usuário quais linhas e colunas possuem somente valores negativos.
 
+# Receive a numeric matrix and report to user what line and column that have only negative values.
 def negativeValue(matrix):
     size = len(matrix)
     line = 0

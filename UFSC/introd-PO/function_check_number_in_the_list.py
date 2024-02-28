@@ -1,4 +1,6 @@
-#Recebe uma lista de números e um número qualquer e retorna um valor lógico indicando se o número está presente na lista.
+# Recebe uma lista de números e um número qualquer e retorna um valor lógico indicando se o número está presente na lista.
+
+# Receive a list numbers and an any number and return a logic number indicating if the number is present on the list.
 def in_the_list(list, number):
     size = len(list)
     ind = 0

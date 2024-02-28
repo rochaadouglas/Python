@@ -1,5 +1,6 @@
-#Recebe uma matriz numérica e um número como parâmetros e retorna um valor lógico informando se ela contém ou não o número informado.
+# Recebe uma matriz numérica e um número como parâmetros e retorna um valor lógico informando se ela contém ou não o número informado.
 
+# Receive a numeric matrix and a number as parameter and return a logical value informing if it contening or not the number.
 def trueorfalse(matrix, number):
     num = number
     size = len(matrix)

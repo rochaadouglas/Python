@@ -1,3 +1,6 @@
+# Importar a Função do fatorial.
+
+# Import the Factorial function.
 from function_factorial import factorial
 def NP(num, mult):
     num_n = num

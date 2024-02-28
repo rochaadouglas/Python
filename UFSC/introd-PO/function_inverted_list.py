@@ -1,4 +1,6 @@
-#Recebe uma lista com conteúdos de diferentes tipos e mostra-os para o usuário em ordem inversa (essa função não tem retorno).
+# Recebe uma lista com conteúdos de diferentes tipos e mostra-os para o usuário em ordem inversa (essa função não tem retorno).
+
+# Receive a list with different types elements and show it to user in inversion order. This function has no return.
 def inverted_list(list):
     size = len(list)
     ind = size - 1

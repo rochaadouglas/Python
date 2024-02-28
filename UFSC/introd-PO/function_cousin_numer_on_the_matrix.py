@@ -1,5 +1,6 @@
-#Recebe uma matriz numérica e retorna quantos elementos da matriz são números primos.
+# Recebe uma matriz numérica e retorna quantos elementos da matriz são números primos.
 
+# Receive a numeric matrix and return how many alements of matrix are prime numbers.
 from function_cousin import cousin_number
 def cousinNumber(matrix):
     size = len(matrix)

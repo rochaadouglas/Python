@@ -1,4 +1,6 @@
-n1 = 1.3
-n2 = 2
-res = (n1 * n2)/2
-print(f'o resuklrado {res:.1}')
+nome = ['lucas', 'aline', 'gorge', 'thomas']
+ind = 1
+while ind < 4:
+    elemento = nome[ind]
+    print(elemento)
+    ind += 1

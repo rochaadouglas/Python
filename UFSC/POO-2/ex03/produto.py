@@ -2,13 +2,15 @@ from cliente import Cliente
 from categoria_produto import CategoriaProduto
 
 class Produto:
-    def __init__(self, codigo: int, descricao: str, categoria_produto: CategoriaProduto, quantidade: int, cliente: Cliente, preco_unitario=None):
+    def __init__(self, codigo: int, descricao: str, categoria_produto: CategoriaProduto, quantidade: int, preco_unitario: int, cliente: Cliente):
         self.__codigo = codigo
         self.__descricao = descricao
         self.__categoria_produto = categoria_produto
         self.__quantidade = quantidade
         self.__preco_unitario = preco_unitario
         self.__cliente = cliente
+        self.__lista_produtos = []
+        self.__lista_produtos.append(self.__descricao)
 
     @property
     def codigo(self):
@@ -42,7 +44,7 @@ class Produto:
         return self.__quantidade
     
     @quantidade.setter
-    def quantidade(self, quantidade=None):
+    def quantidade(self, quantidade):
         if isinstance(quantidade, int):
             self.__quantidade = quantidade
 
@@ -51,8 +53,9 @@ class Produto:
         return self.preco_unitario
     
     @preco_unitario.setter
-    def preco_unitario(self, preco_unitario=None):
-        self.__preco_unitario = preco_unitario
+    def preco_unitario(self, preco_unitario):
+        if isinstance(preco_unitario, int):
+            self.__preco_unitario = preco_unitario
 
     @property
     def cliente(self):
@@ -64,5 +67,8 @@ class Produto:
             self.__cliente = cliente
 
     def preco_total(self):
-        self.preco_tot = self.__quantidade * self.__preco_unitario
-        return self.preco_tot
+        return self.__quantidade * self.__preco_unitario
+    
+    @property
+    def lista_produtos(self):
+        return self.__lista_produtos

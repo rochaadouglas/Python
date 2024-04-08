@@ -1,6 +1,8 @@
+
+
 class Cliente:
 
-    def __init__(self, nome: str, fone: int):
+    def __init__(self, nome, fone):
         self.__nome = nome
         self.__fone = fone
 
@@ -10,8 +12,7 @@ class Cliente:
 
     @nome.setter
     def nome(self, nome):
-        if isinstance(nome, str):
-            self.__nome = nome
+        self.__nome = nome
 
     @property
     def fone(self):
@@ -19,5 +20,4 @@ class Cliente:
     
     @fone.setter
     def fone(self, fone):
-        if isinstance(fone, int):
-            self.__fone = fone
+        self.__fone = fone

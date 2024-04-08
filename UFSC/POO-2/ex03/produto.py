@@ -1,14 +1,15 @@
 from cliente import Cliente
 from categoria_produto import CategoriaProduto
 
+
 class Produto:
-    def __init__(self, codigo: int, descricao: str, categoria_produto: CategoriaProduto, quantidade: int, preco_unitario: int, cliente: Cliente):
+    def __init__(self, codigo: int, descricao: str, categoria_produto: CategoriaProduto):
         self.__codigo = codigo
         self.__descricao = descricao
         self.__categoria_produto = categoria_produto
-        self.__quantidade = quantidade
-        self.__preco_unitario = preco_unitario
-        self.__cliente = cliente
+        self.__quantidade = None
+        self.__preco_unitario = None
+        self.__cliente = None
 
     @property
     def codigo(self):
@@ -64,6 +65,5 @@ class Produto:
         if isinstance(cliente, Cliente):
             self.__cliente = cliente
 
-    @property
     def preco_total(self):
         return self.__quantidade * self.__preco_unitario

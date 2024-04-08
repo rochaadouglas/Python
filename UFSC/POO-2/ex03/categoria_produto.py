@@ -1,6 +1,6 @@
 class CategoriaProduto:
 
-    def __init__(self, titulo=None):
+    def __init__(self, titulo: str):
         self.__titulo = titulo
 
     @property
@@ -8,5 +8,6 @@ class CategoriaProduto:
         return self.__titulo
     
     @titulo.setter
-    def titulo(self, titulo=None):
-        self.__titulo = titulo
+    def titulo(self, titulo):
+        if isinstance(titulo, str):
+            self.__titulo = titulo

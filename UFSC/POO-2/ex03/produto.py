@@ -49,21 +49,20 @@ class Produto:
 
     @property
     def preco_unitario(self):
-        return self.preco_unitario
+        return self.__preco_unitario
     
     @preco_unitario.setter
     def preco_unitario(self, preco_unitario):
-        if isinstance(preco_unitario, int):
-            self.__preco_unitario = preco_unitario
+        self.__preco_unitario = preco_unitario
 
     @property
     def cliente(self):
         return self.__cliente
-    
+        
     @cliente.setter
-    def cliente(self, cliente=None):
+    def cliente(self, cliente):
         if isinstance(cliente, Cliente):
             self.__cliente = cliente
-
+            
     def preco_total(self):
         return self.__quantidade * self.__preco_unitario

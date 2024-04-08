@@ -9,8 +9,6 @@ class Produto:
         self.__quantidade = quantidade
         self.__preco_unitario = preco_unitario
         self.__cliente = cliente
-        self.__lista_produtos = []
-        self.__lista_produtos.append(self.__descricao)
 
     @property
     def codigo(self):
@@ -66,9 +64,6 @@ class Produto:
         if isinstance(cliente, Cliente):
             self.__cliente = cliente
 
+    @property
     def preco_total(self):
         return self.__quantidade * self.__preco_unitario
-    
-    @property
-    def lista_produtos(self):
-        return self.__lista_produtos

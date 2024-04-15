@@ -1,3 +1,7 @@
+
+
+from livro import Livro
+
 class biblioteca:
 
     def __init__(self, incluir_livro, excluir_livro):

@@ -1,3 +1,5 @@
+
+
 class Capitulo:
 
     def __init__(self, numero: int, titulo: str):
@@ -10,7 +12,8 @@ class Capitulo:
     
     @numero.setter
     def numero(self, numero):
-        self.__numero = numero
+        if isinstance(numero, int):
+            self.__numero = numero
 
     @property
     def titulo(self):
@@ -18,4 +21,5 @@ class Capitulo:
     
     @titulo.setter
     def titulo(self, titulo):
-        self.__titulo = titulo
+        if isinstance(titulo, str):
+            self.__titulo = titulo

@@ -3,8 +3,8 @@
 class Autor:
 
     def __init__(self, codigo: int, nome: str):
-        self.__codigo = codigo
-        self.__nome = nome
+        self.__codigo = None
+        self.__nome = None
 
     @property
     def codigo(self):

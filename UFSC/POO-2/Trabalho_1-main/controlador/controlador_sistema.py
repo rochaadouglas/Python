@@ -5,7 +5,7 @@ from controlador.controlador_diretor import ControladorDiretor
 from controlador.controlador_voto import ControladorVoto
 from limite.tela_sistema import TelaSistema
 
-class controladorSistema:
+class ControladorSistema:
     
     def __init__(self):
         self.__tela_sistema = TelaSistema()

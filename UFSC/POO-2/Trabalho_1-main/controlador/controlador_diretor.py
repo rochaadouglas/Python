@@ -46,7 +46,7 @@ class ControladorDiretor():
             diretor.nome = novos_dados_diretor["nome"]
             diretor.data_de_nascimento = novos_dados_diretor["data_de_nascimento"]
             diretor.nacionalidade = novos_dados_diretor["nacionalidade"]
-            self.lista_atores()
+            self.lista_diretores()
         else:
             self.__tela_diretor.mostra_mensagem("Este diretor nao existe")
 

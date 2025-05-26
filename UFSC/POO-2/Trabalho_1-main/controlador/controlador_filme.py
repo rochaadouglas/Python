@@ -37,7 +37,7 @@ class ControladorFilme:
             novos_dados = self.__tela_filme.pega_dados_filme()
             filme.titulo = novos_dados["titulo"]
             filme.ano = novos_dados["ano"]
-            novo_diretor = self.__controlador_sistema.pega_diretor_por_id(novos_dados["id_diretor"])
+            novo_diretor = self.__controlador_sistema.pega_diretor(novos_dados["id_diretor"])
             filme.diretor = novo_diretor
             
     def lista_filmes(self):

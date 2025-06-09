@@ -28,6 +28,10 @@ class ControladorPedidos():
     PedidoDuplicadoException
     '''
     def incluir_pedido(self, pedido: Pedido):
+        for p in self.__pedidos:
+            if p.numero == pedido.numero:
+                raise PedidoDuplicadoException(pedido.numero)
+        
         self.__pedidos.append(pedido)
 
     '''

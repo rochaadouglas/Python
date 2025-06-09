@@ -4,11 +4,11 @@ from pedido import Pedido
 
 class ControladorPedidos():
     def __init__(self):
-        ...
+        self.__pedidos = []
 
     @property
     def pedidos(self):
-        ...
+        return self.__pedidos
 
     '''
     Busca pedido pelo numero.
@@ -16,7 +16,10 @@ class ControladorPedidos():
     Caso contrario, retorna o pedido.
     '''
     def busca_pedido_por_numero(self, numero):
-        ...
+        for pedido in self.__pedidos:
+            if pedido.numero == numero:
+                return pedido
+        return None
 
     '''
     Incluir pedido na lista.
@@ -24,8 +27,8 @@ class ControladorPedidos():
     Caso o pedido já exista na lista, gerar a excecao: 
     PedidoDuplicadoException
     '''
-    def incluir_pedido(self, pedido):
-        ...
+    def incluir_pedido(self, pedido: Pedido):
+        self.__pedidos.append(pedido)
 
     '''
     Exclui pedido pelo numero.
@@ -33,7 +36,10 @@ class ControladorPedidos():
     Caso contrario, retorna o pedido excluido
     '''
     def excluir_pedido(self, numero):
-        ...
+        pedido = self.busca_pedido_por_numero(numero)
+        if pedido:
+            self.__pedidos.remove(pedido)
+        return None
 
     '''
     Deve calcular o total do faturamento para todos os

@@ -6,7 +6,7 @@ from cliente_fidelidade import ClienteFidelidade
 
 class Pedido():
     def __init__(self, numero: int, cliente: Cliente, tipo: TipoPedido):
-        self.__itens = ItemPedido([])
+        self.__itens = []
         if isinstance(numero, int):
             self.__numero = numero
         if isinstance(cliente, Cliente):
@@ -52,7 +52,13 @@ class Pedido():
     de item duplicado.
     '''
     def inclui_item_pedido(self, codigo, descricao, preco):
-        ...
+        for item in self.__itens:
+            if item.codigo == codigo:
+                return None
+        
+        novo_item = ItemPedido(codigo, descricao, preco)
+        self.__itens.append(novo_item)
+        return novo_item
 
     '''
     Exclui um item do pedido e retorna o item excluido

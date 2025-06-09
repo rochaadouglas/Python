@@ -65,7 +65,11 @@ class Pedido():
     Caso o item nao exista, retorne None
     '''
     def exclui_item_pedido(self, codigo):
-        ...
+        for item in self.__itens:
+            if item.codigo == codigo:
+                self.__itens.remove(item)
+                return item
+        return None
 
     '''
     Deve calcular o valor total do pedido, considerando um custo
@@ -82,4 +86,17 @@ class Pedido():
     @return um float correspondente ao total do pedido
     '''
     def calcula_valor_pedido(self, distancia: float):
-        ...
+        #soma total dos itens 
+        total_itens = sum(item.preco_unitario for item in self.__itens)
+
+        #custo da distancia 
+        custo_distancia = self.__tipo.fator_distancia * distancia
+        
+        #total parcial (itens + distancia)
+        total_pedido = total_itens + custo_distancia
+        
+        #aplica desconto se cliente for fidelidade
+        if isinstance(self.__cliente, ClienteFidelidade):
+            total_pedido *= (1 - self.__cliente.desconto)
+        
+        return total_pedido

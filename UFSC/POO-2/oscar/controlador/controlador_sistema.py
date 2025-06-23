@@ -23,6 +23,9 @@ class ControladorSistema:
             
             if opcao == 1:
                 self.__controlador_ator.abre_tela()
+                break
+            else:
+                self.__tela_sistema.mostra_mensagem("Opção inválida.")
                 
     def pega_ator(self, id: int):
         return self.__controlador_ator.pega_ator(id)

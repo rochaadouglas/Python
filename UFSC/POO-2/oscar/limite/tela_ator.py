@@ -21,4 +21,14 @@ class TelaAtor():
                 "nacionalidade": nacionalidade}
         
     def mostra_ator(self, dados_ator):
-        print("ID DO ATOR", dados_ator["id"])
+        print("ID DO ATOR:", dados_ator["id"])
+        print("NOME DO ATOR:", dados_ator["nome"])
+        print("DATA DE NASCIMENTO DO ATOR:", dados_ator["data_de_nascimento"])
+        print("NACIONALIDADE DO ATOR:", dados_ator["nacionalidade"])
+        
+    def seleciona_ator(self):
+        ator = input("Id do ator a ser selecionado: ")
+        return ator
+    
+    def mostra_mensagem(self, msg):
+        print(msg)

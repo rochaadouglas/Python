@@ -1,4 +1,4 @@
-from entidade.membro_academia import Teste
+from controlador.controlador_sistema import ControladorSistema
 
-teste = Teste()
-teste.mostra_algo()
+if __name__ == "__main__":
+    ControladorSistema().inicializa_sistema()

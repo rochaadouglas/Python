@@ -6,6 +6,10 @@ class ControladorSistema:
     def __init__(self):
         self.__tela_sistema = TelaSistema()
         self.__controlador_ator = ControladorAtor(self)
+        
+    @property
+    def controlador_ator(self):
+        return self.__controlador_ator
     
     #metodo que inializa o sistema, chamando o metodo abre_tela.   
     def inicializa_sistema(self):
@@ -19,3 +23,6 @@ class ControladorSistema:
             
             if opcao == 1:
                 self.__controlador_ator.abre_tela()
+                
+    def pega_ator(self, id: int):
+        return self.__controlador_ator.pega_ator(id)

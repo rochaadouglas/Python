@@ -27,7 +27,7 @@ class TelaAtor():
         print("NACIONALIDADE DO ATOR:", dados_ator["nacionalidade"])
         
     def seleciona_ator(self):
-        ator = input("Id do ator a ser selecionado: ")
+        ator = input("\nId do ator a ser selecionado: ")
         return ator
     
     def mostra_mensagem(self, msg):

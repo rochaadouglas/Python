@@ -48,7 +48,7 @@ class ControladorAtor():
             ator.nacionalidade = novos_dados_ator["nacionalidade"]
             self.lista_atores()
         else:
-            self.__tela_ator.mostra_mensagem() #Chama a tela para mostrar a mensagem na tela do ator
+            self.__tela_ator.mostra_mensagem("Este ator não existe.") #Chama a tela para mostrar a mensagem na tela do ator
             
     def abre_tela(self):
         lista_opcoes = {1: self.incluir_ator, 2: self.alterar_ator}

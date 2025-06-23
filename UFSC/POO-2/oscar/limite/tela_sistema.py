@@ -2,7 +2,6 @@ class TelaSistema:
     
     def tela_opcoes(self):
         print("\n===== MENU PRINCIPAL =====")
-        print("\nEscolha uma opção")
         print("1 - Gerenciar Atores")
         print("2 - Gerenciar Categorias")
         print("3 - Gerenciar Diretores")

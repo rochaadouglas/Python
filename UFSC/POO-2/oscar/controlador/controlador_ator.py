@@ -42,7 +42,7 @@ class ControladorAtor():
         
         if(ator is not None):
             novos_dados_ator = self.__tela_ator.pega_dados_ator()
-            ator.id = novos_dados_ator["id"]
+ #           ator.id = novos_dados_ator["id"]
             ator.nome = novos_dados_ator["nome"]
             ator.data_de_nascimento = novos_dados_ator["data_de_nascimento"]
             ator.nacionalidade = novos_dados_ator["nacionalidade"]

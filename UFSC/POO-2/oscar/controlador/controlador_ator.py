@@ -66,7 +66,7 @@ class ControladorAtor():
             
     def abre_tela(self):
         lista_opcoes = {1: self.incluir_ator, 2: self.alterar_ator,
-                        3: self.lista_atores}
+                        3: self.lista_atores, 4: self.excluir_ator, 0: self.retornar}
         continua = True
         while continua:
             lista_opcoes[self.__tela_ator.tela_opcoes()]()

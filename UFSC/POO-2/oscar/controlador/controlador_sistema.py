@@ -7,10 +7,15 @@ class ControladorSistema:
     def __init__(self):
         self.__tela_sistema = TelaSistema()
         self.__controlador_ator = ControladorAtor(self)
+        self.__controlador_categoria = ControladorCategoria(self)
         
     @property
     def controlador_ator(self):
         return self.__controlador_ator
+    
+    @property
+    def controlador_categoria(self):
+        return self.__controlador_categoria
     
     #metodo que inializa o sistema, chamando o metodo abre_tela.   
     def inicializa_sistema(self):
@@ -24,8 +29,8 @@ class ControladorSistema:
             
             if opcao == 1:
                 self.__controlador_ator.abre_tela()
-            if opcao == 2:
-                self.__controlador_cate
+            elif opcao == 2:
+                self.__controlador_categoria.abre_tela()
                 break
             else:
                 self.__tela_sistema.mostra_mensagem("Opção inválida.")

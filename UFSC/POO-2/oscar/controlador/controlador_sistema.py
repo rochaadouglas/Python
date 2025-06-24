@@ -1,5 +1,6 @@
 from limite.tela_sistema import TelaSistema
 from controlador.controlador_ator import ControladorAtor
+from controlador.controlador_categoria import ControladorCategoria
 
 class ControladorSistema:
     
@@ -23,6 +24,8 @@ class ControladorSistema:
             
             if opcao == 1:
                 self.__controlador_ator.abre_tela()
+            if opcao == 2:
+                self.__controlador_cate
                 break
             else:
                 self.__tela_sistema.mostra_mensagem("Opção inválida.")

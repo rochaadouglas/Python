@@ -11,6 +11,9 @@ class TelaCategoria:
         opcao = int(input("Escolha uma opção: "))
         return opcao
     
+    def mostra_categoria(self, dados_categoria):
+        print("CATEGORIA: ", dados_categoria["nome"])
+    
     def pega_dados_categoria(self):
         print("\n------- DADOS CATEGORIA -------")
         nome = input("Nome: ")

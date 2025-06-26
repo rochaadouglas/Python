@@ -1,6 +1,7 @@
 from limite.tela_sistema import TelaSistema
 from controlador.controlador_ator import ControladorAtor
 from controlador.controlador_categoria import ControladorCategoria
+from controlador.controlador_diretor import ControladorDiretor
 
 class ControladorSistema:
     
@@ -8,6 +9,7 @@ class ControladorSistema:
         self.__tela_sistema = TelaSistema()
         self.__controlador_ator = ControladorAtor(self)
         self.__controlador_categoria = ControladorCategoria(self)
+        self.__controlador_diretor = ControladorDiretor(self)
         
     @property
     def controlador_ator(self):
@@ -16,6 +18,10 @@ class ControladorSistema:
     @property
     def controlador_categoria(self):
         return self.__controlador_categoria
+    
+    @property
+    def controlador_diretor(self):
+        return self.__controlador_diretor
     
     #metodo que inializa o sistema, chamando o metodo abre_tela.   
     def inicializa_sistema(self):
@@ -31,6 +37,8 @@ class ControladorSistema:
                 self.__controlador_ator.abre_tela()
             elif opcao == 2:
                 self.__controlador_categoria.abre_tela()
+            elif opcao == 3:
+                self.__controlador_diretor.abre_tela()
                 break
             else:
                 self.__tela_sistema.mostra_mensagem("Opção inválida.")

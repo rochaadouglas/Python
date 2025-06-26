@@ -38,6 +38,6 @@ class Filme(Votavel):
         return self.__ano
     
     @ano.setter
-    def ano(self, ano):
+    def ano(self, ano: int):
         if isinstance(ano, int):
             self.__ano = ano

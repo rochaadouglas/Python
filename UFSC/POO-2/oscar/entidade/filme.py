@@ -3,7 +3,7 @@ from entidade.votavel import Votavel
 
 class Filme(Votavel):
     
-    def __init__(self, titulo: str, diretor: Diretor, ano: int):
+    def __init__(self, id: int, titulo: str, diretor: Diretor, ano: int):
         super().__init__(id)
         self.__categorias = []
         if isinstance(titulo, str):

@@ -28,8 +28,8 @@ class Filme(Votavel):
         return self.__diretor
     
     @diretor.setter
-    def diretor(self, diretor: str):
-        if isinstance(diretor, str):
+    def diretor(self, diretor: Diretor):
+        if isinstance(diretor, Diretor):
             self.__diretor = diretor
             
     

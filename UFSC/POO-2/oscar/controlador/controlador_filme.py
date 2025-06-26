@@ -21,7 +21,7 @@ class ControladorFilme():
         try: 
             if filme == None:
                 filme = Filme(dados_filme["id"], dados_filme["titulo"], 
-                              dados_filme["diretor"], dados_filme["ano"])
+                              dados_filme["nome_diretor"], dados_filme["ano"])
                 self.__filmes.append(filme)
             else:
                 raise FilmeRepetidoException(id)
@@ -34,7 +34,8 @@ class ControladorFilme():
                                             "ano": filme.ano, "nome_diretor": filme.nome_diretor})
             
     def abre_tela(self):
-        lista_opcoes = {1: self.incluir_filme}
+        lista_opcoes = {1: self.incluir_filme,
+                        3: self.lista_filmes}
         continua = True
         while continua:
             lista_opcoes[self.__tela_filme.tela_opcoes()]()

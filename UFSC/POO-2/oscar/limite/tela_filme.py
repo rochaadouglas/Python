@@ -23,8 +23,9 @@ class TelaFilme:
     def mostra_filme(self, dados_filme):
         print("ID DO FILME", dados_filme["id"])
         print("TITULO DO FILME", dados_filme["titulo"])
-        print("ANO DO FILME", dados_filme["ano"])
         print("NOME DO DIRETOR", dados_filme["nome_diretor"])
+        print("ANO DO FILME", dados_filme["ano"])
+
     
     def seleciona_filme(self):
         filme = input("Id do filme a ser selecionado: ")

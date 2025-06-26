@@ -31,7 +31,7 @@ class ControladorFilme():
     def lista_filmes(self):
         for filme in self.__filmes:
             self.__tela_filme.mostra_filme({"id": filme.id, "titulo": filme.titulo,
-                                            "ano": filme.ano, "nome_diretor": filme.nome_diretor})
+                                             "nome_diretor": filme.nome_diretor, "ano": filme.ano})
             
     def abre_tela(self):
         lista_opcoes = {1: self.incluir_filme,

@@ -3,6 +3,7 @@ from controlador.controlador_ator import ControladorAtor
 from controlador.controlador_categoria import ControladorCategoria
 from controlador.controlador_diretor import ControladorDiretor
 from controlador.controlador_filme import ControladorFilme
+from controlador.controlador_voto import ControladorVoto
 
 class ControladorSistema:
     
@@ -12,6 +13,7 @@ class ControladorSistema:
         self.__controlador_categoria = ControladorCategoria(self)
         self.__controlador_diretor = ControladorDiretor(self)
         self.__controlador_filme = ControladorFilme(self)
+        self.__controlador_voto = ControladorVoto(self)
         
     @property
     def controlador_ator(self):
@@ -28,6 +30,10 @@ class ControladorSistema:
     @property
     def controlador_filme(self):
         return self.__controlador_filme
+    
+    @property
+    def controlador_voto(self):
+        return self.__controlador_voto
     
     #metodo que inializa o sistema, chamando o metodo abre_tela.   
     def inicializa_sistema(self):
@@ -47,6 +53,10 @@ class ControladorSistema:
                 self.__controlador_diretor.abre_tela()
             elif opcao == 4:
                 self.__controlador_filme.abre_tela()
+            elif opcao == 5:
+                self.__controlador_voto.abre_tela()
+            elif opcao == 0:
+                self.__tela_sistema.mostra_mensagem("Encerrando o sistema...")
                 break
             else:
                 self.__tela_sistema.mostra_mensagem("Opção inválida.")

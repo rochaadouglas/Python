@@ -86,7 +86,8 @@ class ControladorVoto():
             
     def abre_tela(self):
         lista_opcoes = {1: self.incluir_voto, 2: self.alterar_voto,
-                        3: self.lista_votos, 4: self.excluir_voto}
+                        3: self.lista_votos, 4: self.excluir_voto, 5: self.apurar_vencedores,
+                        0: self.retornar}
         continua = True
         while continua:
             lista_opcoes[self.__tela_voto.tela_opcoes()]()

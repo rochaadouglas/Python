@@ -6,7 +6,6 @@ class TelaFilme:
         print("2 - Alterar Filme")
         print("3 - Listar Filme")
         print("4 - Excluir Filme")
-        print("5 - Gerenciar Categoria")
         print("0 - Retornar")
         
         opcao = int(input("Escolha uma opção: "))
@@ -21,6 +20,7 @@ class TelaFilme:
         return {"id": id, "titulo": titulo, "ano": ano, "nome_diretor": nome_diretor}
     
     def mostra_filme(self, dados_filme):
+        print("\n------- LISTA DE FILMES -------")
         print("ID DO FILME", dados_filme["id"])
         print("TITULO DO FILME", dados_filme["titulo"])
         print("NOME DO DIRETOR", dados_filme["nome_diretor"])

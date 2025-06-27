@@ -3,15 +3,12 @@ from entidade.votavel import Votavel
 
 class Filme(Votavel):
     
-    def __init__(self, id: int, titulo: str, diretor: Diretor, ano: int):
+    def __init__(self, id: int, titulo: str, nome_diretor: Diretor, ano: int):
         super().__init__(id)
         self.__categorias = []
-        if isinstance(titulo, str):
-            self.__titulo = titulo
-        if isinstance(diretor, Diretor):
-            self.__diretor = diretor
-        if isinstance(ano, int):
-            self.__ano = ano
+        self.__titulo = titulo
+        self.__nome_diretor = nome_diretor
+        self.__ano = ano
             
     @property
     def titulo(self):
@@ -24,20 +21,20 @@ class Filme(Votavel):
           
             
     @property
-    def diretor(self):
-        return self.__diretor
+    def nome_diretor(self):
+        return self.__nome_diretor
     
-    @diretor.setter
-    def diretor(self, diretor: Diretor):
+    @nome_diretor.setter
+    def nome_diretor(self, diretor: Diretor):
         if isinstance(diretor, Diretor):
-            self.__diretor = diretor
+            self.__nome_diretor = diretor
             
     
     @property
     def ano(self):
         return self.__ano
     
-#    @ano.setter
-#    def ano(self, ano: int):
-#        if isinstance(ano, int):
-#            self.__ano = ano
+    @ano.setter
+    def ano(self, ano: int):
+        if isinstance(ano, int):
+            self.__ano = ano

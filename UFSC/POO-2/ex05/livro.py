@@ -3,28 +3,21 @@ from autor import Autor
 from capitulo import Capitulo
 
 class Livro:
-    def __init__(self, codigo: int, titulo: str, ano: int, editora: Editora, autor: Autor, numero_capitulo: int, titulo_capitulo: str):
+    def __init__(self, codigo: int, titulo: str, ano: int, editora: Editora, 
+                 autor: Autor, numero_capitulo: int, titulo_capitulo: str):
         # Criar todos os atributos, incluindo as listas
         # Incluir o primeiro autor e o primeiro capitulo nas respectivas listas
-        self.__codigo = None
-        self.__titulo = None
-        self.__ano = None
-        self.__editora = None
+        self.__codigo = codigo
+        self.__titulo = titulo
+        self.__ano = ano
+        self.__editora = editora
         self.__autores = []
         self.__capitulos = []
-        um_capitulo = Capitulo(numero_capitulo, titulo_capitulo)
-        self.__capitulos.append(um_capitulo)
-        if isinstance(codigo, int):
-            self.__codigo = codigo
-        if isinstance(titulo, str):
-            self.__titulo = titulo
-        if isinstance(ano, int):
-            self.__ano = ano
-        if isinstance(editora, Editora):
-            self.__editora = editora
-        if isinstance(autor, Autor):
-            self.__autores.append(autor)
         
+        if autor:
+            self.incluir_autor(autor)
+            
+        self.incluir_capitulo(numero_capitulo, titulo_capitulo)
 
     @property
     def codigo(self):
@@ -45,6 +38,9 @@ class Livro:
         if isinstance(titulo, str):
             self.__titulo = titulo
     
+    @property
+    def autores(self):
+        return self.__autores
     
     @property
     def ano(self):
@@ -70,10 +66,10 @@ class Livro:
         #Nao esqueca de garantir que o objeto recebido pertence a classe Autor...
         # Nao permitir insercao de Autores duplicados!
         if isinstance(autor, Autor):
-            self.__autor.append(autor)
+            self.__autores.append(autor)
 
     def excluir_autor(self, autor: Autor):
-        if isinstance(autor, Autor):
+        if autor in self.__autores:
             self.__autores.remove(autor)
 
     def incluir_capitulo(self, numero: int, titulo: str):

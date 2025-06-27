@@ -1,12 +1,7 @@
 class Capitulo:
     def __init__(self, numero: int, titulo: str):
-        self.__numero = None
-        self.__titulo = None
-        if isinstance(numero, int):
-            self.__numero = numero
-        if isinstance(titulo, str):
-            self.__titulo = titulo 
-            
+        self.__numero = numero
+        self.__titulo = titulo
 
     @property
     def numero(self):

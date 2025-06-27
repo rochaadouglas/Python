@@ -1,11 +1,7 @@
 class Autor:
     def __init__(self, codigo: int, nome: str):
-        self.__codigo = None
-        self.__nome = None
-        if isinstance(codigo, int):
-            self.__codigo = codigo
-        if isinstance(nome, str):
-            self.nome = nome
+        self.__codigo = codigo
+        self.__nome = nome
 
     @property
     def codigo(self):

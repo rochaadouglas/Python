@@ -3,12 +3,9 @@ from abstractTipoChamado import AbstractTipoChamado
 
 class TipoChamado(AbstractTipoChamado):
     def __init__(self, codigo: int, descricao: str, nome: str):
-        if isinstance(codigo, int):
-            self.__codigo = codigo
-        if isinstance(descricao, str):
-            self.__descricao = descricao
-        if isinstance(nome, str):
-            self.__nome = nome
+        self.__codigo = codigo
+        self.__descricao = descricao
+        self.__nome = nome
             
     @property
     def codigo(self):

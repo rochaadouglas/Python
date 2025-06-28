@@ -16,10 +16,12 @@ class ControladorPessoas(AbstractControladorPessoas):
     def tecnicos(self):
         return self.__tecnicos
     
-    def inclui_cliente(self, codigo :int, nome :str) -> Cliente:
-        cliente = Cliente(nome, codigo)
-        if cliente not in self.__clientes:
-            self.__clientes.append(cliente)
+    def inclui_cliente(self, codigo :int, nome :str):
+        novo_cliente = Cliente(nome, codigo)
+        self.__clientes.append(novo_cliente)
+        return novo_cliente
     
-    def inclui_tecnico(self, codigo :int, nome :str) -> Tecnico:
-        pass
+    def inclui_tecnico(self, codigo :int, nome :str):
+        novo_tecnico = Tecnico(nome, codigo)
+        self.__tecnicos.append(novo_tecnico)
+        return novo_tecnico

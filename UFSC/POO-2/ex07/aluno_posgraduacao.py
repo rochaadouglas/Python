@@ -30,5 +30,5 @@ class AlunoPosGraduacao(Aluno):
         return f'Devolveu {titulo_livro}.'
     
 
-al01 = AlunoPosGraduacao(12032, 30, 232323, True)
-print(al01.emprestar("Harry Poter"))
+#al01 = AlunoPosGraduacao(12032, 30, 232323, True)
+#print(al01.emprestar("Harry Poter"))

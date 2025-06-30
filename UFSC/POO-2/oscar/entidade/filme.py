@@ -38,3 +38,12 @@ class Filme(Votavel):
     def ano(self, ano: int):
         if isinstance(ano, int):
             self.__ano = ano
+            
+    def incluir_categoria(self, categoria):
+        if categoria not in self.__categorias:
+            self.__categorias.append(categoria)
+    
+    def remover_categoria(self, nome):
+        for categoria in self.__categorias:
+            if categoria.nome == nome:
+                self.__categorias.remove(categoria)

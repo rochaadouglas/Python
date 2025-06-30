@@ -25,7 +25,7 @@ class TelaVoto:
         return opcao
 
     def init_opcoes(self):
-        sg.ChangeLookAndFeel('DarkAmber')
+        sg.theme('DarkAmber')
         layout = [
             [sg.Text('-------- VOTO ----------', font=("Helvica", 25))],
             [sg.Text('Escolha sua opção', font=("Helvica", 15))],
@@ -40,7 +40,7 @@ class TelaVoto:
         self.__window = sg.Window('Sistema de Votação do Oscar').Layout(layout)
 
     def pega_dados_voto(self):
-        sg.ChangeLookAndFeel('DarkAmber')
+        sg.theme('DarkAmber')
         layout = [
             [sg.Text('-------- DADOS VOTO ----------', font=("Helvica", 25))],
             [sg.Text('Membro:', size=(15, 1)), sg.InputText('', key='membro')],
@@ -69,7 +69,7 @@ class TelaVoto:
         sg.Popup('-------- LISTA DE VOTOS ----------', string_todos_votos)
 
     def seleciona_voto(self):
-        sg.ChangeLookAndFeel('DarkAmber')
+        sg.theme('DarkAmber')
         layout = [
             [sg.Text('-------- SELECIONA VOTO ----------', font=("Helvica", 25))],
             [sg.Text('Digite o membro e categoria do voto que deseja selecionar:', font=("Helvica", 15))],

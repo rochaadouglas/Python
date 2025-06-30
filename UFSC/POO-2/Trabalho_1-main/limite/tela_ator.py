@@ -23,7 +23,7 @@ class TelaAtor:
         return opcao
 
     def init_opcoes(self):
-        sg.ChangeLookAndFeel('DarkAmber')
+        sg.theme('DarkAmber')
         layout = [
             [sg.Text('-------- ATOR ----------', font=("Helvica", 25))],
             [sg.Text('Escolha sua opção', font=("Helvica", 15))],
@@ -39,7 +39,7 @@ class TelaAtor:
 
 
     def pega_dados_ator(self):
-        sg.ChangeLookAndFeel('DarkAmber')
+        sg.theme('DarkAmber')
         layout = [
             [sg.Text('-------- DADOS ATOR ----------', font=("Helvica", 25))],
             [sg.Text('Id:', size=(15, 1)), sg.InputText('', key='id')],
@@ -72,7 +72,7 @@ class TelaAtor:
         sg.Popup('-------- LISTA DE ATORES ----------', string_todos_atores)
 
     def seleciona_ator(self):
-        sg.ChangeLookAndFeel('DarkAmber')
+        sg.theme('DarkAmber')
         layout = [
             [sg.Text('-------- SELECIONA ATOR ----------', font=("Helvica", 25))],
             [sg.Text('Digite o id do ator que deseja selecionar:', font=("Helvica", 15))],

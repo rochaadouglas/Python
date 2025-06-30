@@ -23,7 +23,7 @@ class TelaDiretor:
         return opcao
 
     def init_opcoes(self):
-        sg.ChangeLookAndFeel('DarkAmber')
+        sg.theme('DarkAmber')
         layout = [
             [sg.Text('-------- DIRETOR ----------', font=("Helvica", 25))],
             [sg.Text('Escolha sua opção', font=("Helvica", 15))],
@@ -39,7 +39,7 @@ class TelaDiretor:
 
 
     def pega_dados_diretor(self):
-        sg.ChangeLookAndFeel('DarkAmber')
+        sg.theme('DarkAmber')
         layout = [
             [sg.Text('-------- DADOS DIRETOR ----------', font=("Helvica", 25))],
             [sg.Text('Id:', size=(15, 1)), sg.InputText('', key='id')],
@@ -72,7 +72,7 @@ class TelaDiretor:
         sg.Popup('-------- LISTA DE DIRETORES ----------', string_todos_diretores)
 
     def seleciona_diretor(self):
-        sg.ChangeLookAndFeel('DarkAmber')
+        sg.theme('DarkAmber')
         layout = [
             [sg.Text('-------- SELECIONA DIRETOR ----------', font=("Helvica", 25))],
             [sg.Text('Digite o id do diretor que deseja selecionar:', font=("Helvica", 15))],

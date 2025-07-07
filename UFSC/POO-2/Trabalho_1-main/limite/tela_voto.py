@@ -25,7 +25,7 @@ class TelaVoto:
         return opcao
 
     def init_opcoes(self):
-        sg.theme('DarkAmber')
+        sg.ChangeLookAndFeel('DarkAmber')
         layout = [
             [sg.Text('-------- VOTO ----------', font=("Helvica", 25))],
             [sg.Text('Escolha sua opção', font=("Helvica", 15))],
@@ -40,23 +40,33 @@ class TelaVoto:
         self.__window = sg.Window('Sistema de Votação do Oscar').Layout(layout)
 
     def pega_dados_voto(self):
-        sg.theme('DarkAmber')
+        sg.ChangeLookAndFeel('DarkAmber')
         layout = [
-            [sg.Text('-------- DADOS VOTO ----------', font=("Helvica", 25))],
-            [sg.Text('Membro:', size=(15, 1)), sg.InputText('', key='membro')],
-            [sg.Text('Categoria:', size=(15, 1)), sg.InputText('', key='categoria')],
-            [sg.Text('Alvo:', size=(15, 1)), sg.InputText('', key='alvo')],
+            [sg.Text('-------- NOVO VOTO ----------', font=("Helvica", 25))],
+            [sg.Text('ID do membro:', size=(20, 1)), sg.InputText('', key='membro_id')],
+            [sg.Text('Nome da categoria:', size=(20, 1)), sg.InputText('', key='categoria')],
+            [sg.Text('ID do alvo:', size=(20, 1)), sg.InputText('', key='alvo_id')],
             [sg.Button('Confirmar'), sg.Cancel('Cancelar')]
         ]
-        self.__window = sg.Window('Sistema de Votação do Oscar').Layout(layout)
 
-        button, values = self.open()
-        membro = values['membro']
-        categoria = values['categoria']
-        alvo = values['alvo']
+        window = sg.Window('Sistema de Votação do Oscar').Layout(layout)
+        button, values = window.Read()
+        window.Close()
 
-        self.close()
-        return {"membro": membro, "categoria": categoria, "alvo": alvo}
+        # Conversão e validação
+        try:
+            membro_id = int(values['membro_id'])
+            alvo_id = int(values['alvo_id'])
+            categoria = values['categoria'].strip()
+        except (ValueError, TypeError):
+            sg.popup("Erro: Informe valores válidos.")
+            return self.pega_dados_voto()
+
+        return {
+            "membro_id": membro_id,
+            "categoria": categoria,
+            "alvo_id": alvo_id
+        }
 
     def mostra_voto(self, dados_voto):
         string_todos_votos = ""
@@ -69,7 +79,7 @@ class TelaVoto:
         sg.Popup('-------- LISTA DE VOTOS ----------', string_todos_votos)
 
     def seleciona_voto(self):
-        sg.theme('DarkAmber')
+        sg.ChangeLookAndFeel('DarkAmber')
         layout = [
             [sg.Text('-------- SELECIONA VOTO ----------', font=("Helvica", 25))],
             [sg.Text('Digite o membro e categoria do voto que deseja selecionar:', font=("Helvica", 15))],

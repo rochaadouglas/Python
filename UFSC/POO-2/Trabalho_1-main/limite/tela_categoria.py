@@ -23,7 +23,7 @@ class TelaCategoria:
         return opcao
 
     def init_opcoes(self):
-        sg.theme('DarkAmber')
+        sg.ChangeLookAndFeel('DarkAmber')
         layout = [
             [sg.Text('-------- CATEGORIAS ----------', font=("Helvica", 25))],
             [sg.Text('Escolha sua opção', font=("Helvica", 15))],
@@ -39,7 +39,7 @@ class TelaCategoria:
 
 
     def pega_dados_categoria(self):
-        sg.theme('DarkAmber')
+        sg.ChangeLookAndFeel('DarkAmber')
         layout = [
             [sg.Text('-------- DADOS CATEGORIA ----------', font=("Helvica", 25))],
             [sg.Text('Nome:', size=(15, 1)), sg.InputText('', key='nome')],
@@ -62,7 +62,7 @@ class TelaCategoria:
         sg.Popup('-------- LISTA DE CATEGORIAS ----------', string_todas_categorias)
 
     def seleciona_categoria(self):
-        sg.theme('DarkAmber')
+        sg.ChangeLookAndFeel('DarkAmber')
         layout = [
             [sg.Text('-------- SELECIONA CATEGORIA ----------', font=("Helvica", 25))],
             [sg.Text('Digite o nome da categoria que deseja selecionar:', font=("Helvica", 15))],

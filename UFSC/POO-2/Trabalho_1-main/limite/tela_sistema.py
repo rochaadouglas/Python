@@ -26,7 +26,7 @@ class TelaSistema:
         return opcao
 
     def init_components(self):
-        sg.theme('DarkAmber')
+        sg.ChangeLookAndFeel('DarkAmber')
         layout = [
             [sg.Text('Bem vindo ao sistema de votação do Oscar', font=("Helvica", 25))],
             [sg.Text('Escolha sua opção', font=("Helvica", 15))],

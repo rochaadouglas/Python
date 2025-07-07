@@ -23,7 +23,7 @@ class TelaDiretor:
         return opcao
 
     def init_opcoes(self):
-        sg.theme('DarkAmber')
+        sg.ChangeLookAndFeel('DarkAmber')
         layout = [
             [sg.Text('-------- DIRETOR ----------', font=("Helvica", 25))],
             [sg.Text('Escolha sua opção', font=("Helvica", 15))],
@@ -39,7 +39,7 @@ class TelaDiretor:
 
 
     def pega_dados_diretor(self):
-        sg.theme('DarkAmber')
+        sg.ChangeLookAndFeel('DarkAmber')
         layout = [
             [sg.Text('-------- DADOS DIRETOR ----------', font=("Helvica", 25))],
             [sg.Text('Id:', size=(15, 1)), sg.InputText('', key='id')],
@@ -64,15 +64,15 @@ class TelaDiretor:
     def mostra_diretor(self, dados_diretor):
         string_todos_diretores = ""
         for dado in dados_diretor:
-            string_todos_diretores = string_todos_diretores + "ID DO DIRETOR: " + dado["id"] + '\n'
+            string_todos_diretores = string_todos_diretores + "ID DO DIRETOR: " + str(dado["id"]) + '\n'
             string_todos_diretores = string_todos_diretores + "NOME DO DIRETOR: " + dado["nome"] + '\n'
-            string_todos_diretores = string_todos_diretores + "DATA DE NASCIMENTO DO DIRETOR: " + dado["data_de_nascimento"] + '\n'
+            string_todos_diretores = string_todos_diretores + "DATA DE NASCIMENTO DO DIRETOR: " + str(dado["data_de_nascimento"]) + '\n'
             string_todos_diretores = string_todos_diretores + "NACIONALIDADE DO DIRETOR: " + dado["nacionalidade"] + '\n\n'    
 
         sg.Popup('-------- LISTA DE DIRETORES ----------', string_todos_diretores)
 
     def seleciona_diretor(self):
-        sg.theme('DarkAmber')
+        sg.ChangeLookAndFeel('DarkAmber')
         layout = [
             [sg.Text('-------- SELECIONA DIRETOR ----------', font=("Helvica", 25))],
             [sg.Text('Digite o id do diretor que deseja selecionar:', font=("Helvica", 15))],
@@ -85,7 +85,6 @@ class TelaDiretor:
         id = int(values['id'])
         self.close()
         return id
-
 
     def mostra_mensagem(self, msg):
         sg.popup("", msg)

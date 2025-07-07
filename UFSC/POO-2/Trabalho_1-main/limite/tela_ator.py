@@ -23,7 +23,7 @@ class TelaAtor:
         return opcao
 
     def init_opcoes(self):
-        sg.theme('DarkAmber')
+        sg.ChangeLookAndFeel('DarkAmber')
         layout = [
             [sg.Text('-------- ATOR ----------', font=("Helvica", 25))],
             [sg.Text('Escolha sua opção', font=("Helvica", 15))],
@@ -36,10 +36,8 @@ class TelaAtor:
         ]
         self.__window = sg.Window('Sistema de Votação do Oscar').Layout(layout)
 
-
-
     def pega_dados_ator(self):
-        sg.theme('DarkAmber')
+        sg.ChangeLookAndFeel('DarkAmber')
         layout = [
             [sg.Text('-------- DADOS ATOR ----------', font=("Helvica", 25))],
             [sg.Text('Id:', size=(15, 1)), sg.InputText('', key='id')],
@@ -60,7 +58,6 @@ class TelaAtor:
         return {"id": id, "nome": nome, "data_de_nascimento": data_de_nascimento,
                 "nacionalidade": nacionalidade}
 
-
     def mostra_ator(self, dados_ator):
         string_todos_atores = ""
         for dado in dados_ator:
@@ -72,7 +69,7 @@ class TelaAtor:
         sg.Popup('-------- LISTA DE ATORES ----------', string_todos_atores)
 
     def seleciona_ator(self):
-        sg.theme('DarkAmber')
+        sg.ChangeLookAndFeel('DarkAmber')
         layout = [
             [sg.Text('-------- SELECIONA ATOR ----------', font=("Helvica", 25))],
             [sg.Text('Digite o id do ator que deseja selecionar:', font=("Helvica", 15))],
@@ -85,7 +82,6 @@ class TelaAtor:
         id = int(values['id'])
         self.close()
         return id
-
 
     def mostra_mensagem(self, msg):
         sg.popup("", msg)

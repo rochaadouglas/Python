@@ -4,6 +4,7 @@ from exception.voto_repetido_exception import VotoRepetidoException
 from entidade.membro_academia import MembroAcademia
 from entidade.categoria import Categoria
 from collections import defaultdict, Counter
+from entidade.filme import Filme
 
 
 class ControladorVoto():
@@ -34,18 +35,18 @@ class ControladorVoto():
             return
 
         # Buscar categoria por nome
-        categoria = self.__controlador_sistema.controlador_categoria.pega_por_nome(nome_categoria)
+        categoria = self.__controlador_sistema.controlador_categoria.pega_categoria(nome_categoria)
         if not categoria:
             self.__tela_voto.mostra_mensagem("Categoria não encontrada.")
             return
 
         # Buscar alvo por ID conforme o tipo da categoria
         alvo = None
-        if categoria.tipo == "Filme":
+        if categoria.nome == "Melhor Filme":
             alvo = self.__controlador_sistema.controlador_filme.pega_filme(id_alvo)
-        elif categoria.tipo == "Ator":
+        elif categoria.nome == "Melhor Ator":
             alvo = self.__controlador_sistema.controlador_ator.pega_ator(id_alvo)
-        elif categoria.tipo == "Diretor":
+        elif categoria.nome == "Melhor Diretor":
             alvo = self.__controlador_sistema.controlador_diretor.pega_diretor(id_alvo)
 
         if not alvo:
@@ -64,9 +65,26 @@ class ControladorVoto():
             self.__tela_voto.mostra_mensagem(e)
 
     def lista_votos(self):
+        if not self.__votos:
+            self.__tela_voto.mostra_mensagem("Nenhum voto registrado.")
+            return
+        
+        lista_formatada = []
         for voto in self.__votos:
-            self.__tela_voto.mostra_voto({"membro": voto.membro, "categoria": voto.categoria,
-                                         "alvo": voto.alvo})
+            
+            if isinstance(voto.alvo, Filme):
+                nome_alvo = voto.alvo.titulo
+            else:
+                nome_alvo = voto.alvo.nome
+                
+            dados = {
+                "membro": voto.membro.nome,
+                "categoria": voto.categoria.nome,
+                "alvo": nome_alvo
+            }
+            lista_formatada.append(dados)
+        
+        self.__tela_voto.mostra_voto(lista_formatada)
 
     def alterar_voto(self):
         self.lista_votos()
@@ -109,8 +127,14 @@ class ControladorVoto():
             vencedores[categoria] = mais_votado
 
         for categoria, (alvo, qtd_votos) in vencedores.items():
+            
+            if isinstance(alvo, Filme):
+                nome_alvo = alvo.titulo
+            else:
+                nome_alvo = alvo.nome
+                
             self.__tela_voto.mostra_mensagem(
-                f"Categoria: {categoria.nome} - Vencedor: {alvo.nome} com {qtd_votos} votos")
+                f"Categoria: {categoria.nome} - Vencedor: {nome_alvo} com {qtd_votos} votos")
 
         return vencedores
 

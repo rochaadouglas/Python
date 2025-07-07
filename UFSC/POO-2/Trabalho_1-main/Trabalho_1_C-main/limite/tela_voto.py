@@ -71,9 +71,9 @@ class TelaVoto:
     def mostra_voto(self, dados_voto):
         string_todos_votos = ""
         for dado in dados_voto:
-            string_todos_votos = string_todos_votos + "MEMBRO QUE VOTOU: " + dado["membro"] + '\n'
-            string_todos_votos = string_todos_votos + "CATEGORIA: " + dado["categoria"] + '\n'
-            string_todos_votos = string_todos_votos + "ALVO DO VOTO: " + dado["alvo"] + '\n\n'
+            string_todos_votos = string_todos_votos + "MEMBRO QUE VOTOU: " + str(dado["membro"]) + '\n'
+            string_todos_votos = string_todos_votos + "CATEGORIA: " + str(dado["categoria"]) + '\n'
+            string_todos_votos = string_todos_votos + "ALVO DO VOTO: " + str(dado["alvo"]) + '\n\n'
             
 
         sg.Popup('-------- LISTA DE VOTOS ----------', string_todos_votos)

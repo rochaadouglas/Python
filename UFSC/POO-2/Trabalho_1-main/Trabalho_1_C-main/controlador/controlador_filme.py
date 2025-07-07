@@ -29,8 +29,7 @@ class ControladorFilme():
                 nome_diretor = dados_filme["diretor"]
                 diretor = self.__controlador_diretor.pega_diretor_por_nome(nome_diretor)
 
-                filme = Filme(dados_filme["id"], dados_filme["titulo"], 
-                              diretor, dados_filme["ano"])
+                filme = Filme(dados_filme["id"], dados_filme["titulo"], dados_filme["diretor"], dados_filme["ano"])
                 self.__filme_dao.add(filme)
             else:
                 raise FilmeRepetidoException(id)
@@ -73,7 +72,7 @@ class ControladorFilme():
         dados_filme = []
         for filme in self.__filme_dao.get_all():
             dados_filme.append({"id": filme.id, "titulo": filme.titulo,
-                                "diretor": filme.diretor.nome, "ano": filme.ano})
+                                "diretor": filme.diretor, "ano": filme.ano})
         self.__tela_filme.mostra_filme(dados_filme)
             
     def abre_tela(self):

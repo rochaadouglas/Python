@@ -34,18 +34,18 @@ class ControladorVoto():
             return
 
         # Buscar categoria por nome
-        categoria = self.__controlador_sistema.controlador_categoria.pega_por_nome(nome_categoria)
+        categoria = self.__controlador_sistema.controlador_categoria.pega_categoria(nome_categoria)
         if not categoria:
             self.__tela_voto.mostra_mensagem("Categoria não encontrada.")
             return
 
         # Buscar alvo por ID conforme o tipo da categoria
         alvo = None
-        if categoria.tipo == "Filme":
+        if categoria.nome == "Filme":
             alvo = self.__controlador_sistema.controlador_filme.pega_filme(id_alvo)
-        elif categoria.tipo == "Ator":
+        elif categoria.nome == "Ator":
             alvo = self.__controlador_sistema.controlador_ator.pega_ator(id_alvo)
-        elif categoria.tipo == "Diretor":
+        elif categoria.nome == "Diretor":
             alvo = self.__controlador_sistema.controlador_diretor.pega_diretor(id_alvo)
 
         if not alvo:

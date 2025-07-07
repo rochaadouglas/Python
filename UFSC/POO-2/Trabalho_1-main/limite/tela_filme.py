@@ -46,7 +46,7 @@ class TelaFilme:
             [sg.Text('Id do Filme:', size=(15, 1)), sg.InputText('', key='id')],
             [sg.Text('Titulo do Filme:', size=(15, 1)), sg.InputText('', key='titulo')],
             [sg.Text('Ano do Filme:', size=(15, 1)), sg.InputText('', key='ano')],
-            [sg.Text('Nome do Diretor', size=(15, 1)), sg.InputText('', key='nome_diretor')],
+            [sg.Text('Nome do Diretor', size=(15, 1)), sg.InputText('', key='diretor')],
             [sg.Button('Confirmar'), sg.Cancel('Cancelar')]
         ]
         self.__window = sg.Window('Sistema de Votação do Oscar').Layout(layout)
@@ -55,10 +55,10 @@ class TelaFilme:
         id = int(values['id'])
         titulo = values['titulo']
         ano = values['ano']
-        nome_diretor = values['nome_diretor']
+        nome_diretor = values['diretor']
         
         self.close()
-        return {"id": id, "titulo": titulo, "ano": ano, "nome_diretor": nome_diretor}  
+        return {"id": id, "titulo": titulo, "ano": ano, "diretor": nome_diretor}  
     
     def mostra_filme(self, dados_filme):
         string_todos_filmes = ""

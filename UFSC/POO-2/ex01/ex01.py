@@ -11,8 +11,4 @@ class Ordenacao():
 
     def to_string(self, lista):
         lista_ordenada = self.ordena(lista)
-        return " ".join(map(str, self.nova_lista))
-    
-lista = [4, 3, 2, 1, 5]
-ord = Ordenacao()
-print(ord.to_string(lista))
+        return ",".join(map(str, self.nova_lista))

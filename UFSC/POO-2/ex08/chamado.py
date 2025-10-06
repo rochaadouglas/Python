@@ -16,44 +16,44 @@ class Chamado(AbstractChamado):
             prioridade: int,
             tipo: TipoChamado):
         if isinstance(data, Date):
-            self.data = data
+            self.__data = data
         if isinstance(cliente, Cliente):
-            self.cliente = cliente
+            self.__cliente = cliente
         if isinstance(tecnico, Tecnico):
-            self.tecnico = tecnico
+            self.__tecnico = tecnico
         if isinstance(titulo, str):
-            self.titulo = titulo
+            self.__titulo = titulo
         if isinstance(descricao, str):
-            self.descricao = descricao
+            self.__descricao = descricao
         if isinstance(prioridade, int):
-            self.prioridade = prioridade
+            self.__prioridade = prioridade
         if isinstance(tipo, TipoChamado):
-            self.tipo = tipo
+            self.__tipo = tipo
             
     @property
     def data(self):
-        return self.data
+        return self.__data
     
-    @property
+    @property   
     def cliente(self):
-        return self.cliente
+        return self.__cliente
     
     @property
     def tecnico(self):
-        return self.tecnico
+        return self.__tecnico
     
     @property
     def titulo(self):
-        return self.titulo
+        return self.__titulo
     
     @property
     def descricao(self):
-        return self.descricao
+        return self.__descricao
     
     @property
     def prioridade(self):
-        return self.prioridade
+        return self.__prioridade
     
     @property
     def tipo(self):
-        return self.tipo
+        return self.__tipo

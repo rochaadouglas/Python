@@ -10,18 +10,12 @@ class ControladorPessoa:
         
         
     def abre_tela(self):
-        while True:
-            opcao = self.__tela_pessoa.mostra_opcoes()
-            if opcao == 1:
-                self.incluir_pessoa()
-            elif opcao == 2:
-                self.listar_pessoa()
-            elif opcao == 3:
-                self.excluir_pessoa()
-            elif opcao == 0:
-                break
-            
-            
+        lista_opcoes = {1: self.incluir_pessoa, 0: self.retornar}
+        continua = True
+        while continua:
+            lista_opcoes[self.__tela_pessoa.mostra_opcoes()]()
+    
+    
     def incluir_pessoa(self):
         dados = self.__tela_pessoa.pega_dados_pessoa()
         nova_pessoa = Pessoa(dados["nome"], dados["celular"], dados["identificacao"])
@@ -34,7 +28,7 @@ class ControladorPessoa:
             self.__tela_pessoa.mostra_mensagem("Nenhuma pessoa cadastrada.")
         else:
             for pessoa in self.__pessoas:
-                self.__tela_pessoa.mostra_pessoa(pessoa) #dados da pessoa como dicionário 
+                self.__tela_pessoa.mostra_pessoa(pessoa)
                 
                 
     def excluir_pessoa(self):
@@ -45,7 +39,9 @@ class ControladorPessoa:
             self.__tela_pessoa.mostra_mensagem("Pessoa removida com sucesso.")
         else:
             self.__tela_pessoa.mostra_mensagem("Pessoa não encontrada.")
-        
+    
+    def retornar(self):
+        self.__controlador_sistema.abre_tela()
         
     def busca_pessoa_por_id(self, identificacao: str):
         for pessoa in self.__pessoas:

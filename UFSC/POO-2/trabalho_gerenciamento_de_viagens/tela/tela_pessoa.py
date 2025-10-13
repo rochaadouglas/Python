@@ -6,18 +6,16 @@ class TelaPessoa:
         print("2 - Listar Pessoas")
         print("3 - Excluir Pessoa")
         print("0 - Retornar ao menu principal")
-        try:
-            opcao = int(input("Escolha uma opção: "))
-            return opcao
-        except ValueError:
-            print("Opção inválida! Digite apenas números.")
+        
+        opcao = int(input("Escolha uma opção: "))
+        return opcao
     
     
     def pega_dados_pessoa(self):
         print("\n----- Cadastro de Pessoa -----")
         nome = input("Nome: ")
         celular = input("Celular: ")
-        identificacao = input(" CPF/Passaporte: ")
+        identificacao = input("CPF/Passaporte: ")
         return {"nome": nome, "celular": celular, "identificacao": identificacao}
     
     

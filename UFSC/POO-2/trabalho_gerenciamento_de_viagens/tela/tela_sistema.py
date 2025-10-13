@@ -5,7 +5,9 @@ class TelaSistema:
         print("1 - Gerenciar Pessoas")
         print("0 - Sair do sistema")
         try:
-            opcao = int(input("Escolha uma opção: "))
+            return int(input("Escolha uma opção: "))
         except ValueError:
             print("Opção inválida! Digite apenas números.")
-                
+    
+    def mostra_mensagem(self, mensagem):
+        print(f"\n{mensagem}")

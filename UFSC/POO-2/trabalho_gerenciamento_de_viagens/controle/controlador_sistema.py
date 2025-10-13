@@ -14,14 +14,14 @@ class ControladorSistema:
         return self.__controlador_pessoa
     
     def inicializa_sistema(self):
-        self.abre_tela
+        self.abre_tela()
         
     def abre_tela(self):
         while True:
             opcao = self.__tela_sistema.tela_opcoes()
             
             if opcao == 1:
-                self.__tela_pessoa.mostra_opcoes()
+                self.__controlador_pessoa.abre_tela()
             elif opcao == 0:
                 print("Encerrando o sistema.")
                 break

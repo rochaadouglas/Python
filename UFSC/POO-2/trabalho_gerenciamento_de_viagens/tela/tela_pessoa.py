@@ -9,8 +9,7 @@ class TelaPessoa:
         
         opcao = int(input("Escolha uma opção: "))
         return opcao
-    
-    
+     
     def pega_dados_pessoa(self):
         print("\n----- Cadastro de Pessoa -----")
         nome = input("Nome: ")
@@ -18,18 +17,14 @@ class TelaPessoa:
         identificacao = input("CPF/Passaporte: ")
         return {"nome": nome, "celular": celular, "identificacao": identificacao}
     
-    
     def mostra_pessoa(self, dados_pessoa):
-        print("NOME: ", dados_pessoa["nome"])
-        print("CELULAR (TEL): ", dados_pessoa["celular"])
-        print("CPF/PASSAPORTE: ", dados_pessoa["identificacao"])
-        print("\n")
-        
+        print("Nome: ", dados_pessoa["nome"])
+        print("Celular: ", dados_pessoa["celular"])
+        print("CPF/Passaporte: ", dados_pessoa["identificacao"])
     
     def mostra_mensagem(self, msg: str):
         print(msg)
         
-    
     def pega_identificacao(self):
         cpf = input("CPF da pessoa que deseja selecionar: ")
         return cpf

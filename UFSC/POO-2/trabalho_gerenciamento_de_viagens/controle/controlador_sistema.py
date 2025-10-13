@@ -1,23 +1,25 @@
+from tela.tela_sistema import TelaSistema
 from controle.controlador_pessoa import ControladorPessoa
 from tela.tela_pessoa import TelaPessoa
 
 class ControladorSistema:
     
     def __init__(self):
-        self.__controlador_sistema = ControladorPessoa(self)
+        self.__tela_sistema = TelaSistema()
+        self.__controlador_pessoa = ControladorPessoa(self)
         self.__tela_pessoa = TelaPessoa()
+    
+    @property
+    def controlador_pessoa(self):
+        return self.__controlador_pessoa
+    
+    def inicializa_sistema(self):
+        self.abre_tela
         
-        
-    def abre_sistema(self):
+    def abre_tela(self):
         while True:
-            print("\n===== MENU PRINCIPAL =====")
-            print("1 - Gerenciar Pessoas")
-            print("0 - Sair do sistema")
-            try:
-                opcao = int(input("Escolha uma opção: "))
-            except ValueError:
-                print("Opção inválida! Digite apenas números.")
-                
+            opcao = self.__tela_sistema.tela_opcoes()
+            
             if opcao == 1:
                 self.__tela_pessoa.mostra_opcoes()
             elif opcao == 0:

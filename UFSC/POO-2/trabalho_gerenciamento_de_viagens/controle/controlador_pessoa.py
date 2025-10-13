@@ -3,7 +3,8 @@ from tela.tela_pessoa import TelaPessoa
 
 class ControladorPessoa:
     
-    def __init__(self):
+    def __init__(self, controlador_sistema):
+        self.__controlador_sistema = controlador_sistema
         self.__pessoas = []
         self.__tela_pessoa = TelaPessoa()
         
@@ -33,7 +34,7 @@ class ControladorPessoa:
             self.__tela_pessoa.mostra_mensagem("Nenhuma pessoa cadastrada.")
         else:
             for pessoa in self.__pessoas:
-                self.__tela_pessoa.mostra_pessoa(pessoa)
+                self.__tela_pessoa.mostra_pessoa(pessoa) #dados da pessoa como dicionário 
                 
                 
     def excluir_pessoa(self):

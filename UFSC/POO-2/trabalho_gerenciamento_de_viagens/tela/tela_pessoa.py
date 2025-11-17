@@ -29,7 +29,7 @@ class TelaPessoa:
             [sg.Radio('Listar Pessoa', "RD1", key='2')],
             [sg.Radio('Excluir Pessoa', "RD1", key='3')],
             [sg.Radio('Retornar ao menu principal', "RD1", key='0')],
-            [sg.Button('Confirmar', sg.Cancel('Cancelar'))]
+            [sg.Button('Confirmar'), sg.Cancel('Cancelar')]
         ]
         self.__window = sg.Window('Sistema de Gerenciamento de Viagens').Layout(layout)
         

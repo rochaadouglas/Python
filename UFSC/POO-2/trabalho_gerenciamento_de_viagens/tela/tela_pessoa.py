@@ -39,29 +39,45 @@ class TelaPessoa:
             [sg.Text('----- PEGA DADOS DA PESSOA -----')],
             [sg.Text('Nome: ', size=(15, 1)), sg.InputText('','nome')],
             [sg.Text('Celular: ', size=(15, 1)), sg.InputText('', 'celular')],
-            [sg.Text('CPF/Passaporte: ', size=(15, 1)), sg.InputText('', 'identificacao')]
+            [sg.Text('CPF/Passaporte: ', size=(15, 1)), sg.InputText('', 'identificacao')],
+            [sg.Button('Confirmar'), sg.Cancel('Cancelar')]
         ]
+        self.__window = sg.Window('Sistema de Gerenciamento de Viagens').Layout(layout)
         
+        button, values = self.open()
+        nome = values['nome']
+        celular = values['celular']
+        identificacao = values['identificacao']
         
-        
-        
-        print("\n----- Cadastro de Pessoa -----")
-        nome = input("Nome: ")
-        celular = input("Celular: ")
-        identificacao = input("CPF/Passaporte: ")
+        self.close()
         return {"nome": nome, "celular": celular, "identificacao": identificacao}
     
     def mostra_pessoa(self, dados_pessoa):
-        print("Nome: ", dados_pessoa["nome"])
-        print("Celular: ", dados_pessoa["celular"])
-        print("CPF/Passaporte: ", dados_pessoa["identificacao"])
+        string_todas_pessoas = ""
+        for dado in dados_pessoa:
+            string_todas_pessoas = string_todas_pessoas + "NOME DA PESSOA: " + dado["nome"] + '\n'
+            string_todas_pessoas = string_todas_pessoas + "CELULAR DA PESSOA: " + str(dado["celular"]) + '\n'
+            string_todas_pessoas = string_todas_pessoas + "CPF/PASSAPORTE: " + str(dado['identificacao']) + '\n'
+
+        sg.Popup('----- LISTA DE PESSOA -----', string_todas_pessoas)
     
     def mostra_mensagem(self, msg: str):
-        print(msg)
+        sg.popup("", msg)
         
     def pega_identificacao(self):
-        cpf = input("CPF da pessoa que deseja selecionar: ")
-        return cpf
+        sg.ChangeLookAndFeel('Darkteal4')
+        layout = [
+            [sg.Text('----- SELECIONA PESSOA -----', font=("Helvica", 25))],
+            [sg.Text('Digite o CPF/Passaporte da pessoa que deseja selecionar: ', font=("Helvica", 15))],
+            [sg.Text('CPF/Passaporte: ', size=(15, 1)), sg.InputText('', key='identificacao')],
+            [sg.Button('Confirmar'), sg.Cancel('Cancelar')]
+        ]
+        self.__window = sg.Window('Seleciona Pessoa').Layout(layout)
+        
+        button, values = self.open()
+        identificacao = values['identificacao']
+        self.close()
+        return identificacao
     
     def close(self):
         self.__window.Close()

@@ -9,14 +9,6 @@ class ControladorPessoa:
         self.__pessoas = []
         self.__tela_pessoa = TelaPessoa()
         
-        
-    def abre_tela(self):
-        lista_opcoes = {1: self.incluir_pessoa, 2: self.listar_pessoa,
-                        3: self.excluir_pessoa, 0: self.retornar}
-        continua = True
-        while continua:
-            lista_opcoes[self.__tela_pessoa.mostra_opcoes()]()
-    
     def pega_pessoa(self, id):
         for pessoa in self.__pessoas:
             if pessoa.identificacao == id:
@@ -58,3 +50,10 @@ class ControladorPessoa:
             if pessoa.identificacao == identificacao:
                 return pessoa
         return None
+    
+    def abre_tela(self):
+        lista_opcoes = {1: self.incluir_pessoa, 2: self.listar_pessoa,
+                        3: self.excluir_pessoa, 0: self.retornar}
+        continua = True
+        while continua:
+            lista_opcoes[self.__tela_pessoa.tela_opcoes()]()
